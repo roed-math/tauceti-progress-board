@@ -1,0 +1,1800 @@
+{
+ "AdicSpaces": {
+  "name": "AdicSpaces",
+  "title": "Roadmap: foundations of adic spaces",
+  "state": "active",
+  "layers": [
+   "Layer 0: topological algebra, Huber rings, and Tate algebras",
+   "Layer 1: valuation spectra and continuous valuations",
+   "Layer 2: affinoid spectra and rational subsets",
+   "Layer 3: rational localisation and the structure presheaf",
+   "Layer 4: sheafiness and Tate acyclicity",
+   "Layer 5: adic spaces and elementary geometry",
+   "Layer 6: the adic Fargues\u2013Fontaine curve"
+  ],
+  "readme_lines": 957,
+  "suggested_sorries": 11,
+  "status": {
+   "sha": "f88533f",
+   "ts": "2026-09-01T13:41:42Z",
+   "glance": "Layer 1 is complete through the characterization and spectrality of continuous valuations. Layers 0, 2, 3 and 4 are genuinely partial: `Spa` and its rational topology are established, completed rational localization and a candidate structure presheaf exist, and the first flatness results toward Tate acyclicity have landed; pre-adic spaces, adic-space geometry and the Fargues\u2013Fontaine curve have not begun.",
+   "frontier": [
+    "Rational-localization homeomorphism",
+    "Rational presentation and refinement",
+    "Structure-presheaf local geometry",
+    "Tate acyclicity",
+    "Pre-adic spaces"
+   ],
+   "named": [
+    "[Spectrality of the valuation spectrum](https://taucetiproject.github.io/TauCeti/docs/TauCeti/AlgebraicGeometry/AdicSpace/PatchPresentation.html#TauCeti.ValuationSpectrum.instSpectralSpace)",
+    "[The continuous-valuation characterization](https://taucetiproject.github.io/TauCeti/docs/TauCeti/AlgebraicGeometry/AdicSpace/Cont/OfIdeal.html#TauCeti.ValuationSpectrum.cont_eq_spvOfIdeal_inter_setOfPred_forall_vlt_one)",
+    "[Spectrality of the adic spectrum](https://taucetiproject.github.io/TauCeti/docs/TauCeti/AlgebraicGeometry/AdicSpace/Spa/Spectral.html#TauCeti.ValuationSpectrum.instSpectralSpaceElemSpaOfIsHuberRing)",
+    "[The rational-basis theorem](https://taucetiproject.github.io/TauCeti/docs/TauCeti/AlgebraicGeometry/AdicSpace/Spa/RationalSubset/Basis.html#TauCeti.ValuationSpectrum.isTopologicalBasis_spaRationalFamily)",
+    "[Faithful flatness of restricted power series](https://taucetiproject.github.io/TauCeti/docs/TauCeti/RingTheory/Huber/Restricted/Flat.html#TauCeti.Huber.faithfullyFlat_restrictedMvPowerSeriesSubring)"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-08",
+    "to": "2026-08-12",
+    "prs": 76
+   },
+   {
+    "from": "2026-08-12",
+    "to": "2026-09-01",
+    "prs": 160
+   }
+  ]
+ },
+ "AlgebraicCurves": {
+  "name": "AlgebraicCurves",
+  "title": "Roadmap: algebraic curves \u2014 function fields, divisors, and Riemann\u2013Roch",
+  "state": "active",
+  "layers": [
+   "Layer 0: function fields, constant fields, and places",
+   "Layer 1: the rational function field",
+   "Layer 2: affine models \u2014 the Dedekind bridge",
+   "Layer 3: divisors, `L(D)`, Riemann's theorem, and the genus",
+   "Layer 4: repartitions, Weil differentials, and Riemann\u2013Roch",
+   "Layer 5: consequences of Riemann\u2013Roch, and local components",
+   "Layer 6: extensions of function fields",
+   "Layer 7: the different and the Hurwitz genus formula",
+   "Layer 8: constant-field extensions, Galois ramification, and inseparability \u26a0",
+   "Layer 9: K\u00e4hler differentials, residues, and the comparison",
+   "Layer 10: model classes \u2014 elliptic, hyperelliptic, plane curves",
+   "Layer 11: automorphisms and the Hurwitz bound",
+   "Layer 12: the dictionary \u2014 function fields \u2194 curves, and the comparison contracts"
+  ],
+  "readme_lines": 1410,
+  "suggested_sorries": 36,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layers 0, 1 and 3 are done, through Riemann's theorem and the genus, and Layer 2's dictionary is done for a given Dedekind model. Layer 4 reaches `dim_F \u03a9_F = 1` but not the canonical divisor, duality, or Riemann\u2013Roch; Layer 6 is nearly complete; Layers 5, 7 and 9 are partial; Layers 8 and 10\u201312 have not begun.",
+   "frontier": [
+    "Riemann\u2013Roch",
+    "Layer 5 consequences",
+    "The different divisor and Hurwitz (Layer 7)",
+    "Finite normalization (Layer 2)",
+    "Layers 8, 10, 12"
+   ],
+   "named": [
+    "The product formula",
+    "Riemann's theorem",
+    "The index of specialty as a dimension",
+    "Weil differentials are one-dimensional",
+    "The fundamental identity"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-18",
+    "to": "2026-09-01",
+    "prs": 52
+   }
+  ]
+ },
+ "AnalyticToricGeometry": {
+  "name": "AnalyticToricGeometry",
+  "title": "Roadmap: analytic toric geometry",
+  "state": "active",
+  "layers": [
+   "Layer 0: the Toric-compatible algebraic supplier",
+   "Layer 1: characters and mixed monomial maps",
+   "Layer 2: affine analytic charts of regular cones",
+   "Layer 3: finite-fan analytic gluing",
+   "Layer 4: torus actions, strata, and the boundary",
+   "Layer 5: toric maps and properness",
+   "Layer 6: global algebraic--analytic comparison"
+  ],
+  "readme_lines": 337,
+  "suggested_sorries": 31
+ },
+ "ArithmeticDirichletSeries": {
+  "name": "ArithmeticDirichletSeries",
+  "title": "Roadmap: arithmetic Dirichlet series and Tauberian methods",
+  "state": "active",
+  "layers": [
+   "Layer 0: arithmetic functions on nonzero ideals",
+   "Layer 1: norm fibres and Mathlib `LSeries`",
+   "Layer 2: convolution and logarithmic derivatives",
+   "Layer 3: local factors and Euler products",
+   "Layer 4: counting carriers and local finiteness",
+   "Layer 5: ideal and prime estimates",
+   "Layer 6: Abel and Perron summation",
+   "Layer 7: Dirichlet density",
+   "Layer 8: Landau-type positivity",
+   "Layer 9: Wiener\u2013Ikehara",
+   "Layer 10: generic prime-number-theorem transfer"
+  ],
+  "readme_lines": 424,
+  "suggested_sorries": 50,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layers 0 through 5 and Layer 8 are done, as are the \u03c8-to-\u03d1 and \u03d1-to-\u03c0 legs of Layer 10; Layer 6 lacks the arithmetic Perron formula and the cancellation package, and Layer 3's Euler product is formal only. Layers 7 (Dirichlet density) and 9 (Wiener\u2013Ikehara) have not begun, so the summit `primeNumberTheoremTransfer` does not exist.",
+   "frontier": [
+    "Wiener\u2013Ikehara (Layer 9)",
+    "The boundary package and the summit (10.1, 10.3)",
+    "Analytic Euler product and logarithmic derivative (3.3, 3.4, 2.3)",
+    "Dirichlet density (Layer 7)",
+    "Arithmetic Perron and cancellation (6.4, 6.5)"
+   ],
+   "named": [
+    "Landau's theorem",
+    "Regrouping by norm",
+    "The exact trivial abscissa",
+    "The formal Euler product",
+    "The transfer from \u03d1 to \u03c0"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-20",
+    "to": "2026-09-01",
+    "prs": 26
+   }
+  ]
+ },
+ "BelyiMaps": {
+  "name": "BelyiMaps",
+  "title": "Roadmap: Belyi maps, dessins d'enfants, and three-point covers",
+  "state": "active",
+  "layers": [
+   "Layer 0: permutation triples",
+   "Layer 1: passports, blocks, and finite label semantics",
+   "Layer 2: dessins as finite bipartite ribbon graphs",
+   "Layer 3: finite enumeration and character-theoretic counts",
+   "Layer 4: triangle groups",
+   "Layer 5: the thrice-punctured sphere and its fundamental group",
+   "Layer 6: finite covers and their triples",
+   "Layer 7: compactification and topological branched covers",
+   "Layer 8: Riemann surfaces and analytic Riemann existence",
+   "Layer 9: algebraic Belyi pairs and algebraization",
+   "Layer 10: Belyi's theorem",
+   "Layer 11: fields of moduli, fields of definition, and Galois orbits",
+   "Layer 12: profinite powers, the fundamental group, and the branch-cycle theorem",
+   "Layer 13: the pro-`\u2113` peripheral theorem and faithfulness",
+   "Layer 14: LMFDB assertion semantics"
+  ],
+  "readme_lines": 4698,
+  "suggested_sorries": 114
+ },
+ "CFSGStatement": {
+  "name": "CFSGStatement",
+  "title": "Roadmap: stating the classification of finite simple groups",
+  "state": "active",
+  "layers": [
+   "I0: the index of finite simple groups",
+   "S0: sporadic conventions",
+   "S1: the twenty-six sporadic presentations",
+   "L0: Lie-type carriers",
+   "L1: Steinberg endomorphisms",
+   "L2: twisted conventions",
+   "L3: the finite groups of Lie type",
+   "L4: the Lie-type assembly",
+   "A0: the classification statement"
+  ],
+  "readme_lines": 644,
+  "suggested_sorries": 26,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The index layer and the whole sporadic lane are done in Lean: all twenty-six sporadic groups have cited, count-checked finite presentations assembled into one total function. The Lie-type lane has the full recipe only for type A, plus root-datum shadows of every Steinberg map; the final assembly (`CFSGIndex.Group`, `ClassificationStatement`) has not begun.",
+   "frontier": [
+    "Ambient groups for the remaining families (L0)",
+    "Group-level Suzuki\u2013Ree maps (L2)",
+    "The uniform `ValidLieTypeIndex.steinberg` and `.Group` (L3)",
+    "Assembly (A0)",
+    "The Mathlib Suzuki identification (L4)"
+   ],
+   "named": [
+    "The sporadic presentation table",
+    "The Y\u2084\u2084\u2083 presentation of the Monster",
+    "The type-A candidates",
+    "The root-datum Steinberg map of every valid index",
+    "Universe lowering for classifications"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-09",
+    "to": "2026-09-01",
+    "prs": 81
+   }
+  ]
+ },
+ "Chebotarev": {
+  "name": "Chebotarev",
+  "title": "Roadmap: the Chebotarev density theorem",
+  "state": "active",
+  "layers": [
+   "Layer 1: consumed Frobenius classes and powers of conjugacy classes",
+   "Layer 2: Frobenius prime sets and finite exceptional sets",
+   "Layer 3: prime sums and density normalization",
+   "Layer 4: cyclotomic Galois characters",
+   "Layer 5: ray-class counting and continuation",
+   "Layer 6: cyclotomic Dirichlet density",
+   "Layer 7: the auxiliary prime and the crossing data",
+   "Layer 8: the cyclic fixed-field fibre",
+   "Layer 9: abelian Chebotarev",
+   "Layer 10: Dirichlet-density Chebotarev",
+   "Layer 11: the Frobenius von Mangoldt coefficient and its summatory functions",
+   "Layer 12: the weighted transfer package and the Tauberian theorem",
+   "Layer 13: `\u03d1_C` and `\u03c0_C`",
+   "Layer 14: natural density and consistency theorems"
+  ],
+  "readme_lines": 743,
+  "suggested_sorries": 50,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "None of the roadmap's fourteen layers is complete. Three foundation pieces exist: the power operation on conjugacy classes (all of Layer 1's group-theoretic half), the finite set of ramified primes (part of Layer 2), and the root-of-unity orientation of arithmetic Frobenius (the opening fact of Layer 4). The Frobenius prime set, both density theorems, and the entire counting spine have not begun.",
+   "frontier": [
+    "`frobeniusPrimeSet K L C`",
+    "Layer 1 transport lemmas",
+    "Rest of Layer 4",
+    "Auxiliary-prime theorem (7.1\u20137.3)",
+    "Discard estimates 11.3"
+   ],
+   "named": [
+    "Frobenius orientation on roots of unity",
+    "Membership in a power of a conjugacy class",
+    "Membership in the ramified set"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-09-01",
+    "to": "2026-09-01",
+    "prs": 3
+   }
+  ]
+ },
+ "CombinatorialHeegaardFloer": {
+  "name": "CombinatorialHeegaardFloer",
+  "title": "Roadmap: Combinatorial Heegaard Floer and grid homology",
+  "state": "active",
+  "layers": [
+   "Lane G: grid homology",
+   "Lane ALG: bigraded and filtered homological algebra",
+   "Lane K: knot-theory reconciliation",
+   "Lane L: lattice homology",
+   "Lane H: combinatorial HF\u0302 of 3-manifolds"
+  ],
+  "readme_lines": 368,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "Two of the five lanes are under construction and neither has reached its",
+   "frontier": [
+    "Grid homology of a nontrivial grid.",
+    "Commutation invariance.",
+    "Euler characteristic = Alexander polynomial (G.4).",
+    "Lattice homology of a concrete plumbing.",
+    "Lane H (stable `HF\u0302`)."
+   ],
+   "named": [
+    "Links as grids modulo moves",
+    "The torus grid component count",
+    "The lattice differential squares to zero",
+    "Blow-up splits the intersection form",
+    "`E\u2088` is negative definite"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-19",
+    "to": "2026-08-03",
+    "prs": 60
+   }
+  ]
+ },
+ "ConformalMapping": {
+  "name": "ConformalMapping",
+  "title": "Conformal mapping and the geometric theory of holomorphic functions",
+  "state": "active",
+  "layers": [
+   "L0 \u2014 the local-mapping engine",
+   "L1 \u2014 normal families / Montel",
+   "L2 \u2014 Schwarz lemma extensions",
+   "L3 \u2014 the Riemann mapping theorem",
+   "L4 \u2014 analytic continuation & the reflection principle",
+   "L5 \u2014 Carath\u00e9odory boundary correspondence",
+   "L6 \u2014 Schwarz\u2013Christoffel"
+  ],
+  "readme_lines": 196,
+  "suggested_sorries": 7,
+  "status": {
+   "sha": "03fcee5",
+   "ts": "2026-08-10T15:35:51Z",
+   "glance": "The summit and the layers around it are done: the Riemann mapping theorem, the",
+   "frontier": [
+    "The Carath\u00e9odory continuity theorem, forward direction.",
+    "Plane separation for Jordan curves.",
+    "Monodromy in its intended generality.",
+    "Schwarz\u2013Christoffel (L6)",
+    "Duplication with Mathlib's RMT work."
+   ],
+   "named": [
+    "The Riemann mapping theorem",
+    "The Schwarz reflection principle",
+    "The monodromy theorem",
+    "The isometry group of the Poincar\u00e9 disc",
+    "Wolff's lemma and the length\u2013area inequality"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-29",
+    "to": "2026-08-01",
+    "prs": 75
+   },
+   {
+    "from": "2026-08-01",
+    "to": "2026-08-10",
+    "prs": 78
+   }
+  ]
+ },
+ "DGAInfinity": {
+  "name": "DGAInfinity",
+  "title": "Roadmap: DG and A-infinity algebras, categories, and modules",
+  "state": "active",
+  "layers": [
+   "Layer 0: signed graded multilinear and tensor-coalgebra infrastructure",
+   "Layer 1: DG algebras, categories, modules, and bimodules",
+   "Layer 2: `A\u221e` algebras, categories, morphisms, functors, modules, and bimodules",
+   "Layer 3: minimal models and homological transfer",
+   "Layer 4: bar--cobar, DG strictification, and controlled Maurer--Cartan twisting",
+   "Layer 5: derived modules, twisted complexes, and perfect envelopes",
+   "Layer 6: quasi-equivalence, derived Morita theory, and compact generators",
+   "Layer 7: DG and `A\u221e` quotients, Verdier comparison, and `K\u2080` localization",
+   "Layer 8: Hochschild cochains, deformations, Massey products, and formality",
+   "Layer 9: smoothness, properness, Serre, and Calabi--Yau structures and completions",
+   "Layer 10: `K\u2080(Perf)`, Euler and numerical forms",
+   "Layer 11: relative quadratic and derived Koszul duality"
+  ],
+  "readme_lines": 910,
+  "suggested_sorries": 57,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layer 0 is largely done: graded modules in both presentations, signed homogeneous multilinear maps, the reduced and coaugmented tensor coalgebras with their coderivations, the Koszul braiding, the `R`-linear Hom complex with its enrichment, and the Stasheff identities in both encodings have all landed; still missing there are the completed tensor coalgebra, duals, dependent graded-quiver versions, and the bridge from `b\u00b2 = 0` to the Stasheff identities. Beyond Layer 0 only the contraction package of Layer 3 has been touched; no DG or `A\u221e` algebra has yet been defined.",
+   "frontier": [
+    "`A\u221e` algebras and `b\u00b2 = 0 \u21d4 (SI_n)`",
+    "Completed tensor coalgebra",
+    "DG algebras and DG categories (Layer 1)",
+    "Homological transfer (Layer 3)",
+    "Remaining Layer 0 gaps for Layer 2"
+   ],
+   "named": [
+    "The Koszul braiding on cochain complexes",
+    "The linear Hom complex enrichment",
+    "The graded coderivation/Taylor correspondence",
+    "The suspended and unsuspended Stasheff identities agree",
+    "Normalization of contractions"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-14",
+    "to": "2026-09-01",
+    "prs": 18
+   }
+  ]
+ },
+ "DenseGraphLimits": {
+  "name": "DenseGraphLimits",
+  "title": "Roadmap: dense graph limits and graphons",
+  "state": "active",
+  "layers": [
+   "Layer 0 \u2014 finite-graph and measure scaffolding",
+   "Layer 1 \u2014 core objects and their basic API",
+   "Layer 2 \u2014 counting, regularity, total boundedness",
+   "Layer 3 \u2014 the AE / `AEEqFun` view",
+   "Layer 4 \u2014 completeness and compactness",
+   "Layer 5 \u2014 coupling and map cut distance agree",
+   "Layer 6 \u2014 separation and convergence equivalence",
+   "Layer 7 \u2014 applications and validation",
+   "Layer 8a \u2014 quantum graphs and reflection positivity",
+   "Layer 8b \u2014 Lov\u00e1sz\u2013Szegedy representability",
+   "Layer 9a \u2014 finite and joint graphon sampling",
+   "Layer 9b \u2014 exchangeable graph laws and graphon mixtures",
+   "Layer 9c \u2014 sampling convergence"
+  ],
+  "readme_lines": 861,
+  "suggested_sorries": 122,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The strict carrier (Layer 1), the counting and weak-regularity milestones of Layer 2, the AE view (Layer 3), the coupling/map agreement of Layer 5, and the forward half of separation (Layer 6a) are proved, with Goodman and Mantel as Layer 7 checks. What is genuinely partial is the cut metric itself: the arbitrary-carrier triangle inequality `cutDist_triangle` is not there, so `GraphonSpace` and every quotient-level statement wait on it. Compactness (Layer 4), the inverse counting converse, the convergence equivalence, and Layers 8\u20139 have not begun beyond the finite-graph density estimators.",
+   "frontier": [
+    "`cutDist_triangle`",
+    "`GraphonSpace` and the descent",
+    "The inverse counting lemma",
+    "Compactness of `GraphonSpaceI`",
+    "Sampling (Layer 9a)"
+   ],
+   "named": [
+    "Frieze\u2013Kannan weak regularity",
+    "The counting lemma",
+    "Forward separation",
+    "Coupling and map cut distance agree",
+    "Goodman's inequality"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-17",
+    "to": "2026-09-01",
+    "prs": 33
+   }
+  ]
+ },
+ "EllipticCurves": {
+  "name": "EllipticCurves",
+  "title": "Roadmap: elliptic curves",
+  "state": "active",
+  "layers": [
+   "Layer 0: the function field, places, and divisors",
+   "Layer 0.5: base change, Galois actions, translations, and descent",
+   "Layer 1: isogenies, the dual, the invariant differential, and formal groups",
+   "Layer 2: torsion, the Weil pairing, and the Tate module",
+   "Layer 3: elliptic curves over finite fields \u2014 the Hasse bound",
+   "Layer 4: elliptic curves over local fields \u2014 reduction, Tate's algorithm, the Tate curve",
+   "Layer 5: twists",
+   "Layer 6: the Mordell\u2013Weil theorem",
+   "Layer 7: Selmer groups and Sha"
+  ],
+  "readme_lines": 1214,
+  "suggested_sorries": 33,
+  "status": {
+   "sha": "f5c212c",
+   "ts": "2026-08-30T22:49:04Z",
+   "glance": "The Mordell\u2013Weil summit is proved over number fields, including its weak-descent and na\u00efve-height inputs. The function-field and isogeny layers are substantial but incomplete; the Weil pairing, Hasse bound, local-field theory, and cohomological Selmer/Sha layer have not been established.",
+   "frontier": [
+    "The Hasse bound.",
+    "The dual isogeny.",
+    "The Weil pairing.",
+    "The canonical height.",
+    "Local arithmetic."
+   ],
+   "named": [
+    "The Mordell\u2013Weil theorem",
+    "The weak Mordell\u2013Weil theorem",
+    "The isogeny factorisation theorem",
+    "Classification of the forms of an elliptic curve split by a quadratic extension",
+    "The Nagell\u2013Lutz theorem"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-07",
+    "to": "2026-08-11",
+    "prs": 58
+   },
+   {
+    "from": "2026-08-11",
+    "to": "2026-08-30",
+    "prs": 178
+   }
+  ]
+ },
+ "Exchangeability": {
+  "name": "Exchangeability",
+  "title": "Roadmap: exchangeability and de Finetti",
+  "state": "active",
+  "layers": [
+   "Layer 0: sequence laws, finite marginals, and symmetry notions",
+   "Layer 1: product kernels and mixtures",
+   "Layer 2: process tails and path-space dynamics",
+   "Layer 3: L\u00b2 averaging library and the standard-Borel de Finetti route",
+   "Layer 4: reverse martingales and conditional-expectation limits",
+   "Layer 5: Koopman operators and invariant \u03c3-algebras",
+   "Layer 6: directing measures and de Finetti representation",
+   "Layer 7: public API and examples",
+   "Layer 8: generalized exchangeability and representation theorems"
+  ],
+  "readme_lines": 956,
+  "suggested_sorries": 21,
+  "status": {
+   "sha": "5b603c6",
+   "ts": "2026-09-01T17:14:32Z",
+   "glance": "The de Finetti\u2013Ryll-Nardzewski summit and Layers 0\u20137 are complete, including all three proof routes and the sequence-level empirical, affine, zero-one, ergodic and extreme interfaces. Layer 8 is partial: finite de Finetti and the law-level correspondence are established, while the Markov and array representation converses remain open; nothing in the v1 spine remains unstarted.",
+   "frontier": [
+    "Diaconis\u2013Freedman representation.",
+    "Aldous\u2013Hoover representation."
+   ],
+   "named": [
+    "[The de Finetti\u2013Ryll-Nardzewski equivalence](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/DeFinetti/Theorem.html#TauCeti.Probability.deFinetti_RyllNardzewski_equivalence)",
+    "[De Finetti via L\u00b2 averaging](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/DeFinetti/ViaL2/Theorem.html#TauCeti.Probability.deFinetti_viaL2) and [via Koopman operators](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/DeFinetti/ViaKoopman/Theorem.html#TauCeti.Probability.deFinetti_viaKoopman)",
+    "[The empirical-measure form of de Finetti](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/DeFinetti/EmpiricalMeasure.html#TauCeti.Probability.deFinetti_empiricalMeasure)",
+    "[The quantitative finite de Finetti bound](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/Exchangeability/FiniteDeFinetti.html#TauCeti.Probability.ExchangeableAt.prefixLaw_le_sampleWithReplacement_add)",
+    "[The de Finetti correspondence](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Probability/DeFinetti/Correspondence.html#TauCeti.Probability.deFinettiEquiv)"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-25",
+    "to": "2026-08-01",
+    "prs": 105
+   },
+   {
+    "from": "2026-08-01",
+    "to": "2026-09-01",
+    "prs": 101
+   }
+  ]
+ },
+ "GeometricTopology": {
+  "name": "GeometricTopology",
+  "title": "Roadmap: geometric topology and the solved Kirby-list problems",
+  "state": "active",
+  "layers": [
+   "Layer 1: manifold-library buildout",
+   "Layer 2: locally flat embeddings in general dimension",
+   "Layer 3: diffeomorphism groups with the C^\u221e topology",
+   "Layer 4: knot theory, done properly",
+   "Layer 5: Dehn surgery",
+   "Layer 6: knot concordance and 4D cobordism",
+   "Layer 7: Riemannian geometric structures and volume",
+   "Layer 8: Thurston geometries and the JSJ / geometric decomposition",
+   "Layer 9: Heegaard splittings and Heegaard genus",
+   "Layer 10: foliations and their Euler class",
+   "Layer 11: triangulations, PL structures, and collapse"
+  ],
+  "readme_lines": 1137,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "No Kirby-list statement can be written yet. The simplicial layer (layer 11) is substantially built short of its two theorems; layers 1 through 5 each have real foundations but none has reached its first geometric construction (gluing, a topology on the diffeomorphism group, a knot diagram, a Dehn filling); layers 6 through 10 have not begun.",
+   "frontier": [
+    "Gluing along the boundary",
+    "The `C^\u221e` topology on `Diff(M)`",
+    "Knot diagrams, or a Seifert matrix of a knot",
+    "Zeeman's conjecture as a statement",
+    "Combinatorial manifold implies PL manifold"
+   ],
+   "named": [
+    "The boundary of a manifold with boundary is a manifold",
+    "Smooth embeddings are locally flat",
+    "Codimension-one local flatness is local bicollaring",
+    "The Alexander polynomial of a Seifert matrix",
+    "The boundary of the standard simplex realizes to a sphere"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-20",
+    "to": "2026-09-01",
+    "prs": 74
+   }
+  ]
+ },
+ "GlobalNumberFields": {
+  "name": "GlobalNumberFields",
+  "title": "Roadmap: global number fields, ray classes, adeles, and Hecke characters",
+  "state": "active",
+  "layers": [
+   "Layer 0: places, completions, and the product formula",
+   "Layer 1: weak approximation and multiplicative congruences",
+   "Layer 2: moduli and ray class carriers",
+   "Layer 3: geometry of numbers and ray-class ideal counting",
+   "Layer 4: finite adeles",
+   "Layer 5: full adeles and the additive quotient",
+   "Layer 6: additive strong approximation and ideles",
+   "Layer 7: congruence subgroups and the ray-class dictionary",
+   "Layer 8: finite extensions of adeles and ideles",
+   "Layer 9: Hecke and ray class characters",
+   "Layer 10: archimedean characters, infinity types, and cyclotomic arithmetic",
+   "Layer 11: orders and Picard groups"
+  ],
+  "readme_lines": 703,
+  "suggested_sorries": 116,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The roadmap has just begun. Its Layer 1 headline theorem, mixed-place weak approximation, is done, and Layer 0 has a normalized absolute value on each infinite completion. Everything else, from the finite side of Layer 0 through moduli, ray class groups, ideal counting, adeles, ideles, Hecke characters, infinity types, cyclotomic arithmetic, and orders, has not been started.",
+   "frontier": [
+    "Finish Layer 0",
+    "Finish Layer 1",
+    "Layer 2, moduli and ray class carriers",
+    "Layers 4 and 5, the adelic spine",
+    "Layer 3, uniform ray-class ideal counting"
+   ],
+   "named": [
+    "Artin\u2013Whaples weak approximation at mixed places"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-30",
+    "to": "2026-09-01",
+    "prs": 2
+   }
+  ]
+ },
+ "GrothendieckEulerForms": {
+  "name": "GrothendieckEulerForms",
+  "title": "Roadmap: Grothendieck groups, Cartan maps, and Euler forms",
+  "state": "active",
+  "layers": [
+   "Layer 0: intrinsic exact structures and conflation-exact functors",
+   "Layer 1: the small presentation and universal additive invariants",
+   "Layer 2: split, exact, abelian, and triangulated Grothendieck groups",
+   "Layer 3: finite resolutions and the resolution theorem",
+   "Layer 4: finite-dimensional algebras and the Cartan map",
+   "Layer 5: finite-support Euler characteristics and Ext-Euler descent",
+   "Layer 6: Laurent coefficients, q-Euler forms, and specialization",
+   "Layer 7: left and right numerical Grothendieck groups"
+  ],
+  "readme_lines": 643,
+  "suggested_sorries": 21,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The categorical spine is in place: exact structures, the presentation engine, the four Grothendieck groups with graded \u2124-actions and Laurent module structure, the projective resolution theorem, Euler\u2013Poincar\u00e9, the Ext-Euler pairing and numerical quotients. Genuinely partial are the graded Euler form (defined, but neither sesquilinear nor descended to the Laurent K\u2080), the bounded-complex comparisons and general resolving subcategories; Layer 4 and every worked example have not begun.",
+   "frontier": [
+    "Sesquilinear q-Euler form",
+    "Dual-numbers rejection and the other worked examples",
+    "Layer 4, the Cartan map",
+    "Specialisation at `q = \u00b11` and comparison after forgetting the grading",
+    "Bounded-complex comparisons and general resolving subcategories"
+   ],
+   "named": [
+    "Resolution theorem",
+    "Euler\u2013Poincar\u00e9 theorem",
+    "Horseshoe lemma",
+    "Ext-Euler pairing",
+    "Laurent normalisation of the shift"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-14",
+    "to": "2026-09-01",
+    "prs": 33
+   }
+  ]
+ },
+ "HeegaardFloer": {
+  "name": "HeegaardFloer",
+  "title": "Roadmap: Heegaard Floer homology, analytically",
+  "state": "active",
+  "layers": [
+   "Lane M: Morse homology",
+   "Lane F0: the nonlinear-analysis substrate",
+   "Lane F1: the Cauchy\u2013Riemann elliptic package",
+   "Lane F2: J-holomorphic curves",
+   "Lane F3: Lagrangian Floer homology, exact case",
+   "Lane F4: Heegaard Floer homology, holomorphically",
+   "Lane F5: beyond"
+  ],
+  "readme_lines": 363,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "6919462",
+   "ts": "2026-08-01T03:46:02Z",
+   "glance": "",
+   "frontier": [],
+   "named": []
+  },
+  "windows": [
+   {
+    "from": "2026-06-18",
+    "to": "2026-08-01",
+    "prs": 66
+   }
+  ]
+ },
+ "HodgeStructures": {
+  "name": "HodgeStructures",
+  "title": "Roadmap: Hodge structures (pure, mixed, and polarized)",
+  "state": "active",
+  "layers": [
+   "Core definitions",
+   "Worked instances",
+   "L0: the Hodge decomposition",
+   "L1: semisimplicity",
+   "L2: mixed Hodge structures and strictness",
+   "L3: Hodge numbers and the period domain"
+  ],
+  "readme_lines": 470,
+  "suggested_sorries": 7,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "All four milestones \u2014 the L0 Hodge decomposition, L1 semisimplicity, L2 strictness and the L3 Hodge-number partition \u2014 are proved, and the core definitions have the shape the README specifies. Partial: the L2 companions (coarse conjugation relation on Deligne's bigrading; no abelian structure on the mixed category) and the worked instances (Tate complete, the effective weight-one instance not built). No layer is untouched.",
+   "frontier": [
+    "The fine conjugation relation on Deligne's bigrading",
+    "The abelian category of mixed Hodge structures",
+    "The effective weight-one instance",
+    "Internal Hom of pure Hodge structures",
+    "The composed base-change witness"
+   ],
+   "named": [
+    "The Hodge decomposition",
+    "Semisimplicity of polarizable rational Hodge structures",
+    "Deligne's theorem on the bigrading",
+    "Strictness of morphisms of mixed Hodge structures",
+    "The Hodge numbers partition the dimension"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-14",
+    "to": "2026-09-01",
+    "prs": 27
+   }
+  ]
+ },
+ "HopfRinow": {
+  "name": "HopfRinow",
+  "title": "Roadmap: geodesics, the exponential map, and the Hopf\u2013Rinow theorem",
+  "state": "active",
+  "layers": [
+   "Layer 0: the reconciled Riemannian distance",
+   "Layer 1: the geodesic equation, the flow, and the exponential map",
+   "Layer 2: normal neighbourhoods, the Gauss lemma, and minimizing geodesics",
+   "Layer 3: the Hopf\u2013Rinow equivalence",
+   "Layer 4: corollaries and downstream theory"
+  ],
+  "readme_lines": 463,
+  "suggested_sorries": 1,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layer 0, the reconciled Riemannian distance, is done up to two loose ends, and the connection half of Layer 1 is done: the Levi-Civita connection exists, is unique and `C^\u221e`, the along-curve derivative and the geodesic predicate are in place, and geodesics have constant speed. The geodesic spray, its flow, and the exponential map are not built, so Layers 2 and 3 have not begun; Layer 4's length-space and geodesic-space API exists, but its Riemannian instance waits on Layer 3.",
+   "frontier": [
+    "The geodesic spray",
+    "Local existence, maximal intervals, and homogeneity",
+    "Smooth dependence and the local geodesic flow",
+    "The exponential map and its derivative at zero",
+    "Layer 0 loose ends and the Riemannian geodesic-space instance"
+   ],
+   "named": [
+    "do Carmo's distance is Mathlib's distance",
+    "Existence and uniqueness of the Levi-Civita connection",
+    "Smoothness of the Levi-Civita connection",
+    "Geodesics have constant speed",
+    "The finite-endpoint extension criterion"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-17",
+    "to": "2026-09-01",
+    "prs": 25
+   }
+  ]
+ },
+ "IntegralLattices": {
+  "name": "IntegralLattices",
+  "title": "Roadmap: integral lattices, discriminant forms, and overlattices",
+  "state": "active",
+  "layers": [
+   "Layer 1: lattices with forms",
+   "Layer 2: duality and the finite discriminant group",
+   "Layer 3: finite bilinear and quadratic modules",
+   "Layer 4: overlattices and isotropic subgroups",
+   "Layer 5: rank one and ADE discriminant forms"
+  ],
+  "readme_lines": 430,
+  "suggested_sorries": 91,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The general APIs of Layers 1 to 4, every row of the Layer 5 table, and the `D\u2088 \u2282 E\u2088` glue calculation are formalized, the README's completion criterion. What remains partial is two secondary clauses of Layer 4 (the bilinear `H\u22a5/H` comparison for odd overlattices and its orthogonal-sum form) and the invariant-factor chain of Layer 2; a general bridge from Tau Ceti's pinned root data has not begun.",
+   "frontier": [
+    "Bilinear `H\u22a5/H` for odd overlattices",
+    "Orthogonal-sum naturality of the comparison",
+    "Invariant factors in general",
+    "The Tau Ceti root-data bridge",
+    "`IsZLattice` comparison"
+   ],
+   "named": [
+    "The `D\u2088\u207a \u2245 E\u2088` isometry",
+    "Nikulin's even-overlattice correspondence",
+    "The discriminant form of an even overlattice",
+    "The order of the discriminant group",
+    "The ADE discriminant forms"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-14",
+    "to": "2026-09-01",
+    "prs": 54
+   }
+  ]
+ },
+ "JacobianChallenge": {
+  "name": "JacobianChallenge",
+  "title": "Roadmap: the Jacobian challenge (Christian Merten's AG version)",
+  "state": "active",
+  "layers": [
+   "Layer A, line bundles, divisors, Picard group, degree",
+   "Layer B, coherent cohomology over `k`: genus, Riemann\u2013Roch, Serre duality",
+   "Layer C, relative coherent cohomology and base change",
+   "Layer D, the relative Picard functor and the Jacobian scheme",
+   "Layer E, abelian varieties",
+   "Layer F, Abel\u2013Jacobi and the universal property"
+  ],
+  "readme_lines": 202,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "No layer of the tower is finished and the Jacobian itself does not exist yet. Layer A is the one with real substance: divisors, degree and `Pic\u2070` are built as group theory and have now been connected to actual schemes, while the line-bundle half is only started. Layer E has a usable category of abelian varieties but none of the geometry that makes them abelian varieties. Layers B, C, D and F are untouched, and nothing in the current material touches cohomology at all.",
+   "frontier": [
+    "Coherent cohomology over `k`.",
+    "`Pic X` and the divisor-to-line-bundle dictionary.",
+    "Degree via Euler characteristic.",
+    "`Pic\u2070` as a functor.",
+    "Abel-Jacobi as a morphism of schemes."
+   ],
+   "named": [
+    "The affine Weil-Cartier dictionary",
+    "Divisor class group equals ideal class group",
+    "`Pic\u2070` as a quotient",
+    "Principal divisors really are divisors",
+    "Commutativity of an abelian variety"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-09",
+    "to": "2026-08-03",
+    "prs": 54
+   }
+  ]
+ },
+ "LocalFieldsRamification": {
+  "name": "LocalFieldsRamification",
+  "title": "Roadmap: local fields and ramification",
+  "state": "active",
+  "layers": [
+   "Layer 0: local fields and their finite extensions",
+   "Layer 1: units, the filtration, and the multiplicative group",
+   "Layer 2: unramified extensions and Frobenius",
+   "Layer 3: ramification, the tame and wild cases, and the filtration",
+   "Layer 4: the tame quotient of the absolute Galois group"
+  ],
+  "readme_lines": 1100,
+  "suggested_sorries": 128
+ },
+ "ModularForms": {
+  "name": "ModularForms",
+  "title": "Roadmap: modular forms \u2014 Hecke theory, newforms, and L-functions",
+  "state": "active",
+  "layers": [
+   "Layer 0: diamond operators and modular forms with character",
+   "Layer 1: the valence formula",
+   "Layer 2: Hecke operators and the Hecke algebra",
+   "Layer 3: the Petersson inner product, adjoints, oldforms and newforms",
+   "Layer 4: eigenforms, newforms, primitive forms; the conductor",
+   "Layer 5: strong multiplicity one and the eigenform characterization",
+   "Layer 6: Atkin\u2013Lehner and Fricke operators",
+   "Layer 7: L-functions",
+   "Layer 8: modular symbols, the integral Hecke algebra, and coefficient fields",
+   "Layer 8G: Galois stability, the character field, and rationality",
+   "Layer 9: the LMFDB invariant layer",
+   "Layer 10: the modular curve `\u0393\\\u210d` and the dimension formulas",
+   "Layer 11: the Eichler\u2013Selberg trace formula"
+  ],
+  "readme_lines": 1562,
+  "suggested_sorries": 6,
+  "status": {
+   "sha": "113fad8",
+   "ts": "2026-08-19T23:58:39Z",
+   "glance": "The level-one summit of Layer 1 is complete with the valence formula, while its general-level norm argument remains partial. Layer 0's diamond and character-space trunk and Layer 3's Petersson and old/new construction are substantially built; Layer 2 now has genuine double-coset operators on forms but not the uniform `T_n` action. Layer 7 contains continuation and an abscissa bound, while Eisenstein series and Layers 4\u20136 and 8\u201311 have not begun.",
+   "frontier": [
+    "Uniform Hecke operators.",
+    "General-level valence formula.",
+    "Petersson adjoints and normality.",
+    "Bad-prime newspace stability.",
+    "General-rank local Hecke algebra."
+   ],
+   "named": [
+    "The level-one valence formula",
+    "The level-one structure theorem",
+    "The nebentypus decomposition",
+    "The old/new decomposition with fixed nebentypus",
+    "Shimura's rank-two local presentation"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-03",
+    "to": "2026-08-10",
+    "prs": 83
+   },
+   {
+    "from": "2026-08-10",
+    "to": "2026-08-19",
+    "prs": 104
+   }
+  ]
+ },
+ "Multiquadratic": {
+  "name": "Multiquadratic",
+  "title": "Roadmap: multiquadratic fields and genus theory",
+  "state": "active",
+  "layers": [
+   "Layer 0: the multiquadratic field",
+   "Layer 1: the prime-splitting law",
+   "Layer 2: the 2-elementary quotient of the class group",
+   "Layer 3: the genus field and the 2-rank theorem"
+  ],
+  "readme_lines": 173,
+  "suggested_sorries": 7,
+  "status": {
+   "sha": "6919462",
+   "ts": "2026-08-01T03:46:02Z",
+   "glance": "",
+   "frontier": [],
+   "named": []
+  },
+  "windows": [
+   {
+    "from": "2026-06-13",
+    "to": "2026-08-01",
+    "prs": 73
+   }
+  ]
+ },
+ "NumberFieldArithmetic": {
+  "name": "NumberFieldArithmetic",
+  "title": "Roadmap: number fields, ramification, Frobenius, and the LMFDB invariants",
+  "state": "active",
+  "layers": [
+   "Layer 1: the splitting dictionary",
+   "Layer 2: Frobenius elements and the Artin symbol",
+   "Layer 3: the index, Dedekind\u2013Kummer, and Dedekind's theorem",
+   "Layer 4: the relative discriminant",
+   "Layer 5: the global-local dictionary at finite places",
+   "Layer 6: global ramification consequences",
+   "Layer 7: subfields, integral bases, monogenicity, and explicit units",
+   "Layer 8: the intrinsic label prefix and the invariant suite"
+  ],
+  "readme_lines": 2506,
+  "suggested_sorries": 204,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layers 2.1 and 2.2 are done, Layer 2.3 has its definition and one characterising lemma but none of its comparison API, and Layer 1.1's count criterion is published. Nothing else has begun: Layers 1.2 to 1.5, 2.4 to 2.7, and all of Layers 3 to 8 have no declarations.",
+   "frontier": [
+    "Layer 2.4, functoriality of the Frobenius",
+    "The rest of Layer 2.3's API",
+    "Layer 2.5, the ideal-theoretic Artin map",
+    "Layers 1.3 and 1.4",
+    "Layers 3.1 to 3.5 and 4.1"
+   ],
+   "named": [
+    "Existence of relative Frobenius elements",
+    "Uniqueness of the Frobenius at an unramified prime",
+    "Every Frobenius over `\ud835\udd2d` represents the Artin symbol",
+    "The relative splitting criterion"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-28",
+    "to": "2026-09-01",
+    "prs": 3
+   }
+  ]
+ },
+ "OneParameterSemigroups": {
+  "name": "OneParameterSemigroups",
+  "title": "Roadmap: one-parameter semigroups, completely monotone and positive-definite functions, and Bochner-type representations",
+  "state": "active",
+  "layers": [
+   "Part A \u2014 Strongly continuous semigroups",
+   "Part B \u2014 Completely monotone (and Bernstein) functions",
+   "Part C \u2014 Positive-definite functions and Bochner's theorem"
+  ],
+  "readme_lines": 281,
+  "suggested_sorries": 4,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "Of the three headline representation theorems, one is proved: Bernstein's, in the existence-and-uniqueness form. The C\u2080-semigroup layer is a working theory \u2014 objects, growth bounds, the unbounded generator, the Laplace-transform resolvent, dissipativity, the abstract Cauchy problem \u2014 but stops short of its two generation theorems, Hille-Yosida and Lumer-Phillips, which need the Yosida approximation and have not been started. Positive-definite functions have their predicate, their kernel theory and the Fourier plumbing, but Bochner's theorem and the Berg-Christensen-Ressel representation are untouched.",
+   "frontier": [
+    "Hille-Yosida generation theorem",
+    "Lumer-Phillips, forward direction",
+    "Bochner's theorem on a finite-dimensional real inner-product space",
+    "BCR semigroup-Bochner",
+    "Bernstein as a genuine iff"
+   ],
+   "named": [
+    "Bernstein's theorem",
+    "The generator determines the semigroup",
+    "Converse of Lumer-Phillips",
+    "The abstract Cauchy problem",
+    "Kolmogorov decomposition"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-21",
+    "to": "2026-08-03",
+    "prs": 58
+   }
+  ]
+ },
+ "OptimalTransport": {
+  "name": "OptimalTransport",
+  "title": "Roadmap: optimal transport and Wasserstein geometry",
+  "state": "active",
+  "layers": [
+   "Layer 0: transport plans, maps, kernels, and gluing",
+   "Layer 1: transport cost, compactness, existence, and stability",
+   "Layer 2: Kantorovich duality, transforms, and optimality certificates",
+   "Layer 3: Wasserstein distances and topology",
+   "Layer 4: the Monge problem and abstract transport maps",
+   "Layer 5: convex analysis, Brenier, and polar factorization",
+   "Layer 6: Monge--Amp\u00e8re measures, equations, and regularity",
+   "Layer 7: Riemannian Brenier--McCann transport",
+   "Layer 8: metric curves, dynamic plans, and Benamou--Brenier",
+   "Layer 9: displacement geometry and convexity",
+   "Layer 10: abstract metric gradient flows",
+   "Layer 11: entropy, Wasserstein differential calculus, JKO, and PDE flows",
+   "Layer 12: Fr\u00e9chet and Wasserstein barycenters",
+   "Layer 13: entropic transport, Sinkhorn, and Schr\u00f6dinger bridges",
+   "Layer 14: synthetic curvature, nonsmooth heat flow, and optimal maps",
+   "Layer 15: measured kernels and Gromov--Wasserstein",
+   "Layer 16: public API, extraction, and end-to-end examples"
+  ],
+  "readme_lines": 2107,
+  "suggested_sorries": 9,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layer 0 (plans, maps, kernels, gluing) and Layer 1 (transport cost, compactness, existence, stability) are done, and Layer 2 has weak duality, the `c`-transform calculus, finite and compact strong duality, and optimality certificates. Layer 2's Polish duality, dual attainment, and Borel-cost regimes have not begun, nor has anything from Layer 3 (Wasserstein distances) onward.",
+   "frontier": [
+    "Polish lower-semicontinuous Kantorovich duality",
+    "The `W_p` distance",
+    "Schachermayer\u2013Teichmann on Polish spaces",
+    "Small Layer 1 and 2 gaps",
+    "Borel-cost regimes"
+   ],
+   "named": [
+    "Primal attainment on Polish spaces",
+    "Stability of optimal transport",
+    "Strong Kantorovich duality on compact spaces",
+    "The gluing lemma",
+    "Complementary slackness and optimality certificates"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-08",
+    "to": "2026-09-01",
+    "prs": 28
+   }
+  ]
+ },
+ "PDE": {
+  "name": "PDE",
+  "title": "Roadmap: partial differential equations",
+  "state": "active",
+  "layers": [
+   "Lane A: function spaces on a domain",
+   "Lane B: harmonic-analysis estimates",
+   "Lane C: maximum principles and potential theory",
+   "Lane D: linear elliptic existence",
+   "Lane E: elliptic regularity",
+   "Lane F: parabolic and evolution equations"
+  ],
+  "readme_lines": 402,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "Lane C, the classical maximum-principle and potential theory, is the only lane with genuine theorems: the weak maximum principle is done in any finite dimension for the full operator `-\u0394 - b\u00b7\u2207 + c` with `c \u2265 0`, and Harnack plus the strong maximum principle are done in the plane. Lane D has its algebra but no existence theorem, because Lane A's weak-derivative Sobolev spaces do not yet exist; Lanes B, E and F are untouched.",
+   "frontier": [
+    "`W^{k,p}(\u03a9)` via weak derivatives.",
+    "Existence for the Dirichlet problem.",
+    "The mean-value property on `\u211d\u207f`.",
+    "`-\u0394G = \u03b4` and the Green's function.",
+    "Lane B from scratch."
+   ],
+   "named": [
+    "The weak maximum principle for second-order elliptic operators",
+    "Harnack's inequality in the plane",
+    "The strong maximum principle in the plane",
+    "Necessity of the sign condition",
+    "The pointwise G\u00e5rding inequality"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-09",
+    "to": "2026-08-03",
+    "prs": 56
+   }
+  ]
+ },
+ "PolynomialGaloisGroups": {
+  "name": "PolynomialGaloisGroups",
+  "title": "Roadmap: Galois groups of polynomials",
+  "state": "active",
+  "layers": [
+   "Layer 0: the permutation representation of a polynomial",
+   "Layer 1: permutation groups, blocks, and wreath products",
+   "Layer 2: the dictionary between Galois theory and permutations",
+   "Layer 3: the discriminant and the alternating group",
+   "Layer 4: resolvents",
+   "Layer 5: Frobenius specialization",
+   "Layer 6: transitive subgroups of `S\u2099` for `n \u2264 5`, and the label predicates",
+   "Layer 9: `S\u2099` as a Galois group over `\u211a`"
+  ],
+  "readme_lines": 1699,
+  "suggested_sorries": 83,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Four pull requests have landed, all in the roadmap's opening layers: Layer 0's degree bookkeeping, most of the API for cycle types that count fixed points, and two of Layer 1's recognition theorems. Everything else, from the orbit dictionary and wreath products through discriminants, resolvents, Frobenius specialization, the labels in degree at most five, and the realization of S\u2099 over \u211a, has not begun.",
+   "frontier": [
+    "The remaining recognition theorems of Layer 1",
+    "`fullCycleType` as the roadmap spells it",
+    "Layer 0's orbit dictionary",
+    "The root-product formula for the discriminant",
+    "Blocks and wreath products"
+   ],
+   "named": [
+    "Full cycles in prime degree",
+    "Double transitivity from a long cycle",
+    "Primitivity from a long cycle",
+    "The Galois image has the order of the Galois group",
+    "Cycle types with fixed points are a class function"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-29",
+    "to": "2026-09-01",
+    "prs": 4
+   }
+  ]
+ },
+ "ProfiniteCohomology": {
+  "name": "ProfiniteCohomology",
+  "title": "Roadmap: continuous cohomology of profinite groups",
+  "state": "active",
+  "layers": [
+   "Layer 0: discrete modules and continuous sections",
+   "Layer 1: the canonical carrier and its functoriality",
+   "Layer 2: the explicit low-degree complex and its functoriality",
+   "Layer 3: the comparison isomorphisms",
+   "Layer 4: the finite-quotient colimit description",
+   "Layer 5: exact sequences",
+   "Layer 6: change of groups",
+   "Layer 7: coinduced modules and Shapiro's lemma",
+   "Layer 8: cup products in low degrees",
+   "Layer 9: the Galois interface: Hilbert 90 and Kummer theory",
+   "Layer 10: continuous cohomology in all degrees",
+   "Layer 11: cohomological dimension",
+   "Layer 12: the graded cup product in all degrees",
+   "Layer 13: the Evens norm"
+  ],
+  "readme_lines": 1873,
+  "suggested_sorries": 304,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "The explicit low-degree model is largely built: cochains, functoriality, the long exact sequence through degree 2, corestriction, the six cup products with their identities, and Shapiro's lemma in degrees 0 and 1, and the canonical carrier has its named maps and the discrete-module dictionary. The comparison with Mathlib's continuous cohomology exists only in degree zero, the finite-quotient colimit and the Galois isomorphisms have inputs but not conclusions, and Layers 10 to 13 have not begun.",
+   "frontier": [
+    "The canonical comparison in degrees 1 and 2",
+    "The finite-quotient colimit theorem",
+    "Conjugation and the five-term sequence",
+    "Hilbert 90 and the Kummer isomorphism",
+    "The rest of change of groups and coinduction"
+   ],
+   "named": [
+    "Shapiro's lemma in degrees 0 and 1",
+    "The low-degree long exact sequence",
+    "`cor \u2218 res = (G : U)` in degrees 0, 1 and 2",
+    "The low-degree cup products",
+    "The explicit complex is Mathlib's over a discrete group"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-19",
+    "to": "2026-09-01",
+    "prs": 33
+   }
+  ]
+ },
+ "ProfiniteProPGroups": {
+  "name": "ProfiniteProPGroups",
+  "title": "Roadmap: profinite and pro-`p` groups",
+  "state": "active",
+  "layers": [
+   "Layer 0: profinite foundations",
+   "Layer 1: supernatural order and index",
+   "Layer 2: profinite Sylow theory",
+   "Layer 3: pro-`p` groups, the maximal pro-`p` quotient, Frattini theory, generation",
+   "Layer 4: free pro-`p` and pro-`C` groups on finite sets",
+   "Layer 5: presentations, extensions, and the rank interpretations",
+   "Layer 6: cohomological dimension of pro-`p` groups",
+   "Layer 7: Demushkin groups, their invariants, and the orientation",
+   "Layer 8: the central-tower comparison method and finite-quotient determinacy",
+   "Layer 9 prerequisites: two owned inputs",
+   "Layer 9: the classification of Demushkin groups",
+   "Layer 10: free pro-`C` groups on profinite spaces"
+  ],
+  "readme_lines": 1679,
+  "suggested_sorries": 199,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Only the foundations have begun. Layer 0 is partial: the quotient, correspondence, limit-description and profinite-completion milestones have their main statements, while the instance chain and the compactness lemma have not landed. Layer 3 has the `IsProP` predicate with a covariant API and nothing else. Layers 1, 2 and 4 through 10 are untouched, and of the frozen exported surface only `IsProP` exists.",
+   "frontier": [
+    "The rest of Layer 0",
+    "The `IsProP` API",
+    "The maximal pro-`p` quotient",
+    "Supernatural order and index (Layer 1)",
+    "Profinite Sylow theory (Layer 2)"
+   ],
+   "named": [
+    "Limit description of a profinite group",
+    "Correspondence theorem for open normal subgroups",
+    "Universal property of the profinite completion",
+    "Quotients by closed normal subgroups are totally disconnected",
+    "Open normal subgroups separate points"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-29",
+    "to": "2026-09-01",
+    "prs": 3
+   }
+  ]
+ },
+ "ReductiveGroups": {
+  "name": "ReductiveGroups",
+  "title": "Roadmap: reductive algebraic groups",
+  "state": "active",
+  "layers": [
+   "Layer 0: the functor of points and the three-way dictionary",
+   "Layer 1: representations = comodules",
+   "Layer 2: Lie algebra and the adjoint representation",
+   "Layer 3: subgroups, quotients, components",
+   "Layer 4: Jordan decomposition, diagonalizable groups, tori",
+   "Layer 5: solvable and unipotent groups; the unipotent radical",
+   "Layer 6: reductive and semisimple groups",
+   "Layer 7: structure theory",
+   "Layer 8: classification and existence",
+   "Layer 9: pinned Chevalley\u2013Demazure group schemes over `\u2124`"
+  ],
+  "readme_lines": 331,
+  "suggested_sorries": 4,
+  "status": {
+   "sha": "5df77c1",
+   "ts": "2026-08-30T16:29:02Z",
+   "glance": "Layers 0\u20134 supply the three-way affine-group dictionary, representation theory, Lie theory, quotients and components, and Jordan/torus theory. Layers 5\u20137 are genuinely partial: solvable and reductive structure now has substantial theorems and `GL\u2099` has type-A structure data, but general Lie\u2013Kolchin, the unipotent radical, Borel theory and root data of an arbitrary group are not established; Layers 8 and the main Chevalley\u2013Demazure construction of Layer 9 have not begun.",
+   "frontier": [
+    "The unipotent radical.",
+    "Lie\u2013Kolchin.",
+    "General structure theory.",
+    "Reductive forms and isogenies.",
+    "Classification and Chevalley\u2013Demazure existence."
+   ],
+   "named": [
+    "Tannakian reconstruction",
+    "The multiplicative Jordan decomposition",
+    "Reductivity of general and special linear groups",
+    "The solvable radical",
+    "The type-A root datum of `GL\u2099`"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-04",
+    "to": "2026-07-29",
+    "prs": 100
+   },
+   {
+    "from": "2026-07-29",
+    "to": "2026-08-03",
+    "prs": 59
+   },
+   {
+    "from": "2026-08-03",
+    "to": "2026-08-12",
+    "prs": 60
+   },
+   {
+    "from": "2026-08-12",
+    "to": "2026-08-18",
+    "prs": 185
+   },
+   {
+    "from": "2026-08-18",
+    "to": "2026-08-30",
+    "prs": 255
+   }
+  ]
+ },
+ "RepresentationTheory": {
+  "name": "RepresentationTheory",
+  "title": "Representation theory",
+  "state": "active",
+  "layers": [],
+  "readme_lines": 109,
+  "suggested_sorries": 592,
+  "status": {
+   "sha": "1870dd9",
+   "ts": "2026-08-31T04:53:31Z",
+   "glance": "The Cartan\u2013Killing classification, the finite-group character table, Peter\u2013Weyl, the semisimple-algebra core, and Weyl complete reducibility are established. The finite-dimensional highest-weight classification, the executable character-table solver, Schur\u2013Weyl, Spin representations, and Gabriel's theorem remain partial or absent; the supplied declaration record is truncated, so only explicitly supported results are credited below.",
+   "frontier": [
+    "Finite-dimensional highest-weight classification",
+    "The Weyl character and dimension formulas",
+    "The Burnside\u2013Dixon\u2013Schneider solver",
+    "Spin representations and Kostant isotypy",
+    "Gabriel and Auslander\u2013Reiten theory"
+   ],
+   "named": [
+    "[The Peter\u2013Weyl theorem](https://taucetiproject.github.io/TauCeti/docs/TauCeti/RepresentationTheory/Compact/PeterWeyl.html#TauCeti.stdPeterWeylBasis)",
+    "[The character table and both orthogonality relations](https://taucetiproject.github.io/TauCeti/docs/TauCeti/RepresentationTheory/CharacterTable/Table.html#TauCeti.characterTable)",
+    "[The Cartan\u2013Killing classification](https://taucetiproject.github.io/TauCeti/docs/TauCeti/LinearAlgebra/RootSystem/FiniteType/Classification.html#TauCeti.existsUnique_dynkinType)",
+    "[Weyl's complete reducibility theorem](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Algebra/Lie/HighestWeight/CompleteReducibility.html#TauCeti.exists_isCompl_of_isKilling)",
+    "[The classification of irreducible highest-weight modules](https://taucetiproject.github.io/TauCeti/docs/TauCeti/Algebra/Lie/HighestWeight/Irreducible.html#TauCeti.nonempty_lieModuleEquiv_iff_eq_of_isHighestWeightVector)"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-07-27",
+    "to": "2026-08-01",
+    "prs": 89
+   },
+   {
+    "from": "2026-08-01",
+    "to": "2026-08-09",
+    "prs": 219
+   },
+   {
+    "from": "2026-08-09",
+    "to": "2026-08-11",
+    "prs": 60
+   },
+   {
+    "from": "2026-08-11",
+    "to": "2026-08-19",
+    "prs": 147
+   },
+   {
+    "from": "2026-08-19",
+    "to": "2026-08-31",
+    "prs": 179
+   }
+  ],
+  "children": {
+   "CharacterTheory": {
+    "name": "CharacterTheory",
+    "title": "character theory of finite groups, and computing character tables",
+    "layers": [
+     "Layer 0: class functions and their pairing",
+     "Layer 1: the group algebra, its center, and structure constants",
+     "Layer 2: Wedderburn, irreducible indexing, and the count",
+     "Layer 3: the character table, idempotents, completeness, second orthogonality",
+     "Layer 4: the arithmetic of character values",
+     "Layer 5: the Dixon-Schneider characterization",
+     "Layer 6: the executable Burnside-Dixon-Schneider algorithm",
+     "Layer 7: the Frobenius-Schur indicator and real/quaternionic type",
+     "Layer 8: Frobenius groups and Frobenius's theorem",
+     "Layer 9: the representation theory of GL\u2082"
+    ],
+    "suggested_sorries": 74
+   },
+   "ClassicalGroups": {
+    "name": "ClassicalGroups",
+    "title": "finite-dimensional representations of the classical groups",
+    "layers": [
+     "Layer 0: the classical groups and the standard representation",
+     "Layer 1: functorial constructions and tensor powers",
+     "Layer 2: the Weyl construction via Young symmetrizers",
+     "Layer 3: maximal torus, weights, and the highest-weight classification",
+     "Layer 4: characters and Schur polynomials",
+     "Layer 5: the Weyl dimension formula",
+     "Layer 6: branching rules and Gelfand-Tsetlin bases"
+    ],
+    "suggested_sorries": 38
+   },
+   "CompactGroups": {
+    "name": "CompactGroups",
+    "title": "representations of compact groups and the Peter-Weyl theorem",
+    "layers": [
+     "Layer 0: normalized Haar measure and averaging",
+     "Layer 1: unitarizability",
+     "Layer 2: complete reducibility",
+     "Layer 3: matrix coefficients",
+     "Layer 4: Schur orthogonality in L\u00b2",
+     "Layer 5: the Peter-Weyl theorem",
+     "Layer 6: characters of compact groups"
+    ],
+    "suggested_sorries": 49
+   },
+   "InductionRestriction": {
+    "name": "InductionRestriction",
+    "title": "induction, restriction, and Mackey theory for finite groups",
+    "layers": [
+     "Layer 0: the functorial core -- transitivity and the projection formula",
+     "Layer 1: the conjugate representation",
+     "Layer 2: induced characters and Frobenius reciprocity",
+     "Layer 3: the Mackey decomposition formula",
+     "Layer 3a: the decomposition as an isomorphism of representations",
+     "Layer 3b: the character form",
+     "Layer 4: intertwining numbers and the Mackey irreducibility criterion",
+     "Layer 5: Clifford theory over a normal subgroup",
+     "Layer 6: the virtual-character ring, Artin and Brauer induction",
+     "Layer 7: projective representations, factor sets, and the Schur multiplier"
+    ],
+    "suggested_sorries": 33
+   },
+   "LieGroups": {
+    "name": "LieGroups",
+    "title": "Lie groups and the Lie algebra correspondence",
+    "layers": [
+     "Layer 0: the exponential map and one-parameter subgroups",
+     "Layer 1: the adjoint representations `Ad` and `ad`",
+     "Layer 2: the closed-subgroup (Cartan) theorem",
+     "Layer 3: the Lie functor and Baker-Campbell-Hausdorff",
+     "Layer 4: Frobenius, Lie's third theorem, and the equivalence of categories",
+     "Layer 5: simply-connected covers and the enveloping algebra",
+     "Layer 6: maximal tori, the Weyl group, and Weyl integration",
+     "Layer 7: complexification and real forms",
+     "Layer 8: Borel-Weil, flag manifolds, and Bruhat",
+     "Layer 9: the Cartan, Iwasawa, and KAK decompositions"
+    ],
+    "suggested_sorries": 47
+   },
+   "LieHighestWeight": {
+    "name": "LieHighestWeight",
+    "title": "representations of semisimple Lie algebras, highest weight theory, and the Weyl formulas",
+    "layers": [
+     "Layer 0: `sl\u2082` representation theory",
+     "Layer 1: Cartan subalgebras and the root-space decomposition",
+     "Layer 2: weights of a module and their integrality",
+     "Layer 3: enveloping algebra, Verma modules, and `L(\u03bb)`",
+     "Layer 4: the classification of finite-dimensional irreducibles",
+     "Layer 5: complete reducibility",
+     "Layer 6: the Weyl character, dimension, and Kostant formulas",
+     "Layer 7: the center of `U(L)`, Harish-Chandra, Freudenthal, and Serre's relations",
+     "Layer 8: the exceptional Lie algebras, explicitly",
+     "Layer 9: reductive Lie algebras and `gl_n`"
+    ],
+    "suggested_sorries": 133
+   },
+   "QuiverRepresentations": {
+    "name": "QuiverRepresentations",
+    "title": "quiver representations, path algebras, and Gabriel's theorem",
+    "layers": [
+     "Layer 0: quivers and the path algebra",
+     "Layer 1: representations of a quiver as `kQ`-modules",
+     "Layer 2: the Krull-Schmidt theorem",
+     "Layer 3: the structure of a finite-dimensional algebra",
+     "Layer 4: the Euler form, dimension vectors, and reflection functors",
+     "Layer 5: Gabriel's theorem",
+     "Layer 6: Auslander-Reiten theory"
+    ],
+    "suggested_sorries": 30
+   },
+   "RootSystems": {
+    "name": "RootSystems",
+    "title": "root systems, Weyl groups, and the Cartan-Killing classification",
+    "layers": [
+     "Layer 1: root combinatorics",
+     "Layer 2: the Weyl group as a Coxeter system",
+     "Layer 3: the missing Coxeter combinatorics",
+     "Layer 4: chambers, the fundamental domain, and the longest element",
+     "Layer 5: Dynkin diagrams and the Cartan-Killing classification",
+     "Layer 6: the Bourbaki numbering and integral root data"
+    ],
+    "suggested_sorries": 28
+   },
+   "SchurWeyl": {
+    "name": "SchurWeyl",
+    "title": "representations of the symmetric group, Specht modules, and Schur-Weyl duality",
+    "layers": [
+     "Layer 0: partitions, diagrams, tableaux, and orders",
+     "Layer 1: Young subgroups and the permutation modules `M^\u03bb`",
+     "Layer 2: Young symmetrizers",
+     "Layer 3: the Specht modules `S^\u03bb`",
+     "Layer 4: completeness and irreducibility",
+     "Layer 5: the standard basis and the hook-length formula",
+     "Layer 6: characters and the Murnaghan-Nakayama rule",
+     "Layer 7: symmetric functions, the Frobenius characteristic, and RSK",
+     "Layer 8: Schur-Weyl duality",
+     "Layer 9: Schur-Weyl duality for the orthogonal and symplectic groups"
+    ],
+    "suggested_sorries": 67
+   },
+   "SemisimpleAlgebras": {
+    "name": "SemisimpleAlgebras",
+    "title": "semisimple algebras, Artin-Wedderburn, and the structure of their modules",
+    "layers": [
+     "Layer 0: the Jacobson radical and the semisimplicity criterion",
+     "Layer 1: simple modules, Schur, and isotypic components",
+     "Layer 1.5: every simple module is a minimal left ideal",
+     "Layer 2: Artin-Wedderburn, assembled with uniqueness",
+     "Layer 3: the double-centralizer (density) theorem",
+     "Layer 4: central simple algebras and their tensor products",
+     "Layer 5: Skolem-Noether and the centralizer theorem",
+     "Layer 6: the Brauer group and splitting fields"
+    ],
+    "suggested_sorries": 23
+   },
+   "SpinRepresentations": {
+    "name": "SpinRepresentations",
+    "title": "Clifford algebras, the Pin and Spin groups, and spin representations",
+    "layers": [
+     "Layer 0: the Clifford algebra, its universal property, and the two gradings",
+     "Layer 1: the structure theorem",
+     "Layer 2: the Pin and Spin groups and the double covers",
+     "Layer 3: the Lie algebra `\ud835\udd30\ud835\udd2c(V) \u2245 \u22c0\u00b2V` inside the Clifford algebra",
+     "Layer 4: the spin and half-spin representations",
+     "Layer 5: the fundamental representations of `B\u2097` and `D\u2097`",
+     "Layer 6: the low-dimensional exceptional isomorphisms",
+     "Layer 7: real Clifford algebras, Bott periodicity, and `Spin(p, q)`",
+     "Layer 8: triality for `Spin\u2088`",
+     "Layer 9: Lie algebras acting through the Clifford algebra, and Kostant's isotypy corollary"
+    ],
+    "suggested_sorries": 70
+   }
+  }
+ },
+ "StandardDistributions": {
+  "name": "StandardDistributions",
+  "title": "Roadmap: standard probability distributions and their elementary theory",
+  "state": "active",
+  "layers": [
+   "Layer 0: connect existing densities and add the uniform distribution",
+   "Layer 1: complete the elementary theory of existing distributions",
+   "Layer 2: incomplete special functions and closed-form cdfs",
+   "Layer 3: new scalar families",
+   "Layer 4: relationships among distributions",
+   "Layer 5: multivariate distributions",
+   "Layer 6: symmetric matrices and Wishart distributions"
+  ],
+  "readme_lines": 936,
+  "suggested_sorries": 153,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layers 0, 1, and 2 are done: every Mathlib scalar family has its density bridges, parameter measurability, moments, transforms, and closed-form cdf, and the incomplete gamma, incomplete beta, and error functions exist. Layer 3 is partial (three of nine new families complete, three begun, three not started), Layers 4 and 5 have one or two items each, and Layer 6 has not begun.",
+   "frontier": [
+    "Student's t moments and cdf",
+    "Weibull mgf regimes and hypergeometric moments",
+    "Inverse-gamma, Fisher's F, and negative binomial",
+    "Layer 4 relations",
+    "Multivariate Gaussian density and quadratic forms"
+   ],
+   "named": [
+    "The binomial tail identity",
+    "The Poisson tail identity",
+    "The Gaussian cdf",
+    "Cauchy stability under averaging",
+    "A law on `\u2115` is determined by its pgf"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-17",
+    "to": "2026-09-01",
+    "prs": 47
+   }
+  ]
+ },
+ "UniversalCovers": {
+  "name": "UniversalCovers",
+  "title": "Roadmap: universal covers",
+  "state": "active",
+  "layers": [
+   "Stage 0: port the foundations into `TauCeti/`",
+   "Stage 1: close out the universal cover",
+   "Stage 2: lifting criterion and Galois correspondence",
+   "Stage 3: higher homotopy",
+   "Stage 4: applications"
+  ],
+  "readme_lines": 164,
+  "suggested_sorries": 3,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "",
+   "frontier": [],
+   "named": []
+  },
+  "windows": [
+   {
+    "from": "2026-06-04",
+    "to": "2026-08-03",
+    "prs": 63
+   }
+  ]
+ },
+ "ZigzagPreprojective": {
+  "name": "ZigzagPreprojective",
+  "title": "Roadmap: Zigzag, preprojective, and Ginzburg algebras",
+  "state": "active",
+  "layers": [
+   "Layer 0: affine simply-laced diagrams, doubled graphs, relation quotients, and grading descent",
+   "Layer 1: strict ordinary and skew zigzag algebras",
+   "Layer 2: bases, dimensions, centers, and symmetric Frobenius traces",
+   "Layer 3: projectives, graded Cartan matrices, and `q`-Euler forms",
+   "Layer 4: additive preprojective algebras and orientation independence",
+   "Layer 5: quadratic and Koszul duality",
+   "Layer 6: 2-dimensional Ginzburg DG algebras and Calabi--Yau completion",
+   "Layer 7: derived Koszul duality, Hochschild classes, and `A\u221e` deformation theory",
+   "Layer 8: braid complexes and spherical-twist comparisons"
+  ],
+  "readme_lines": 531,
+  "suggested_sorries": 20,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "Layers 0\u20132 are done for graphs without isolated vertices, Layer 3's graded Cartan matrix and projective Hom dictionary are done, and Layer 4's preprojective algebra is defined with orientation and gauge independence proved. Skew zigzag, the componentwise corrections, and the Frobenius packaging are partial; Layers 5\u20138 and every named example beyond `A\u2081` have not begun.",
+   "frontier": [
+    "Componentwise corrections",
+    "Frobenius and self-injective packaging",
+    "Named examples",
+    "Skew-zigzag classification",
+    "Preprojective dichotomy"
+   ],
+   "named": [
+    "Graded Cartan formula",
+    "Orientation independence of the preprojective algebra",
+    "Symmetric perfect Frobenius pairing",
+    "Centre of a zigzag algebra",
+    "Affine simply-laced form is positive semidefinite"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-08-17",
+    "to": "2026-09-01",
+    "prs": 26
+   }
+  ]
+ },
+ "ContourIntegration": {
+  "name": "ContourIntegration",
+  "title": "Roadmap: contour integration and the Hungerb\u00fchler\u2013Wasem generalized residue theorem",
+  "state": "completed",
+  "layers": [
+   "Layer 0: curves, cycles, and the generalized winding number",
+   "Layer 1: the geometry of the generalized winding number",
+   "Layer 2: residues, the Cauchy primitive, and the classical residue theorem",
+   "Layer 3: the global (homological) Cauchy theorem",
+   "Layer 4: the Hungerb\u00fchler\u2013Wasem generalized residue theorem"
+  ],
+  "readme_lines": 264,
+  "suggested_sorries": 2,
+  "status": {
+   "sha": "6919462",
+   "ts": "2026-08-01T03:46:02Z",
+   "glance": "",
+   "frontier": [
+    "Integrality off the curve.",
+    "HW Prop 2.2 as a statement.",
+    "HW Prop 2.3 on the curve.",
+    "Cycles.",
+    "Weakening the homotopy hypothesis.",
+    "The valence formula.",
+    "Module layout."
+   ],
+   "named": []
+  },
+  "windows": [
+   {
+    "from": "2026-07-04",
+    "to": "2026-08-01",
+    "prs": 92
+   }
+  ]
+ },
+ "EffectiveBounds": {
+  "name": "EffectiveBounds",
+  "title": "Roadmap: effective arithmetic bounds and geometry of numbers",
+  "state": "completed",
+  "layers": [
+   "Layer 0: the geometry-of-numbers engine",
+   "Layer 1: effective upper bounds",
+   "Layer 2: effective Hermite\u2013Minkowski",
+   "Layer 3: regulators and unit-lattice volume"
+  ],
+  "readme_lines": 178,
+  "suggested_sorries": 4,
+  "status": {
+   "sha": "8745177",
+   "ts": "2026-09-01T22:18:35Z",
+   "glance": "This roadmap lives under `Completed/`: the maintainers have declared it complete against its README, which records the Layer-1 explicit bounds, the explicit ideal count, the Layer-0 engine and the Layer-2 summit (an explicit count of number fields of bounded discriminant) as landed sorry-free. Layer 3 (regulators) has only its rank-zero base case, and the Brauer\u2013Siegel horizon has not begun. The declaration list behind this snapshot under-represents the delivered work: each declaration is attributed to the commit that last touched it, and later consolidation of the `EffectiveBounds/` files moved much of the Layer-1 code out of this window.",
+   "frontier": [
+    "Regulator lower bounds for positive unit rank",
+    "Volume computations for the analytic class number formula",
+    "`ZLattice` reconciliation of the engine",
+    "Brauer\u2013Siegel"
+   ],
+   "named": [
+    "Effective Hermite\u2013Minkowski count",
+    "Hermite\u2013Minkowski generating step",
+    "Explicit ideal count",
+    "Lattice doubling bound",
+    "Rank-zero regulator"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-12",
+    "to": "2026-09-01",
+    "prs": 37
+   }
+  ]
+ },
+ "OrthogonalL2Bases": {
+  "name": "OrthogonalL2Bases",
+  "title": "Roadmap: weighted orthogonal L\u00b2 bases \u2014 completeness, Hilbert-basis structure, and product bases of orthogonal systems",
+  "state": "completed",
+  "layers": [
+   "Part A \u2014 The Hermite basis of `L\u00b2",
+   "Part B \u2014 The family-agnostic spine",
+   "Part C \u2014 A second family: the Chebyshev basis of `L\u00b2([-1,1])`",
+   "Part D \u2014 The multidimensional Hermite basis"
+  ],
+  "readme_lines": 404,
+  "suggested_sorries": 0,
+  "status": {
+   "sha": "11ef09d",
+   "ts": "2026-08-03T18:31:13Z",
+   "glance": "Both named summits are reached: the Hermite functions are a complete orthonormal basis of `L\u00b2(\u211d)` and the Chebyshev polynomials a complete orthonormal basis of their weighted `L\u00b2`, assembled from one family-agnostic layer that also produces the weighted-measure and multidimensional bases. What remains is not a missing theorem but missing packaging: expansion API for the non-Hermite bases, and operator-level statements.",
+   "frontier": [
+    "Expansion API for the Chebyshev and Gaussian Hermite bases",
+    "The Fourier transform as a diagonalized operator on `L\u00b2(\u211d)`",
+    "Ladder operators on `L\u00b2`",
+    "Laguerre and Jacobi"
+   ],
+   "named": [
+    "The Hermite basis of `L\u00b2(\u211d)`",
+    "The Chebyshev basis",
+    "Moment determinacy",
+    "Parseval and the Hermite expansion",
+    "The Fourier eigenrelation"
+   ]
+  },
+  "windows": [
+   {
+    "from": "2026-06-28",
+    "to": "2026-08-03",
+    "prs": 42
+   }
+  ]
+ }
+}
