@@ -347,8 +347,8 @@
       <p class="lede">What an autoformalization project can use today to find declarations in the Tau Ceti library, how that compares with Mathlib, and a ranked set of work items to close the gap.</p>
     </div>
     <div class="stamp">
-      audited <b>2026-09-02</b><br>
-      docs at <b>8745177</b> · source at <b>e8af08d</b><br>
+      audited <b>2026-09-02</b>, scaling added <b>2026-09-03</b><br>
+      docs index at <b>8745177</b> · source at the Sep 3 tip<br>
       <a href="https://github.com/TauCetiProject/TauCeti">TauCetiProject/TauCeti</a>
     </div>
   </header>
@@ -360,6 +360,7 @@
     <a href="#compare">Versus Mathlib</a>
     <a href="#recs">Recommendations</a>
     <a href="#decisions">Decisions</a>
+    <a href="#scale">How this scales</a>
     <span class="part">Agents</span>
     <a href="#now">Search it today</a>
     <a href="#briefs">Implementation briefs</a>
@@ -367,7 +368,7 @@
 
   <section id="answer" class="answer">
     <p><strong>Tau Ceti has one search surface, and it matches names only.</strong> The doc-gen4 site indexes every declaration but neither docstrings nor types. Nothing semantic indexes the library: Loogle, LeanSearch, LeanFinder, LeanExplore and Moogle all cover Mathlib alone, and the local Loogle inside lean-lsp-mcp is hard-wired to Mathlib. The written guidance to agents, in both the worker prompt and the reuse rubric, is to grep the source.</p>
-    <p>The docs pipeline already computes almost everything a proper search stack needs. The first three work items below, a published declaration manifest, a Loogle index over the library, and an import-all aggregator for <code>exact?</code>, reuse that pipeline and would give agents the same routes into Tau Ceti that they have into Mathlib.</p>
+    <p>The docs pipeline already computes almost everything a proper search stack needs. The first three work items below, a published declaration manifest, a Loogle index over the library, and an import-all aggregator for <code>exact?</code>, reuse that pipeline and would give agents the same routes into Tau Ceti that they have into Mathlib. The library grew about fivefold in August and is already two fifths of Mathlib by source; the scaling section below reorders the list accordingly, and puts a manifest-based duplicate check ahead of everything but the manifest itself.</p>
   </section>
 
   <h2 id="today"><span class="partmark">Part I · For humans</span>What exists today</h2>
@@ -375,7 +376,7 @@
   <div class="figs">
     <div class="fig"><div class="n">49,604</div><div class="l">declarations in the docs index</div><div class="s">docs SOURCE_SHA 8745177</div></div>
     <div class="fig"><div class="n">40,046</div><div class="l">of them theorems</div><div class="s">7,470 defs · 1,521 instances</div></div>
-    <div class="fig"><div class="n">2,447</div><div class="l">Lean files under <code>TauCeti/</code></div><div class="s">516k lines · checkout e8af08d, Aug 17</div></div>
+    <div class="fig"><div class="n">4,272</div><div class="l">Lean files under <code>TauCeti/</code></div><div class="s">983k lines · main, Sep 3</div></div>
     <div class="fig"><div class="n">0</div><div class="l">docstrings in the search index</div><div class="s">name and kind only</div></div>
   </div>
 
@@ -448,7 +449,7 @@
       <div class="id">S3<small>in-tactic</small></div>
       <div>
         <h3>Give consumers an import-all aggregator for <code>exact?</code></h3>
-        <p>Mathlib's <code>Mathlib.lean</code> is what makes <code>exact?</code> search the whole library. A ten-line script generates the same thing for a downstream project from <code>.lake/packages/TauCeti</code>. No change to Tau Ceti, whose root stays empty.</p>
+        <p>Mathlib's <code>Mathlib.lean</code> is what makes <code>exact?</code> search the whole library. A ten-line script generates the same thing for a downstream project from <code>.lake/packages/TauCeti</code>. No change to Tau Ceti, whose root stays empty. Generate one aggregator per top-level directory as well; once the library outgrows Mathlib, a whole-library import is a scratch-file tool only.</p>
         <div class="meta"><span class="pill teal">consumer project</span><span class="pill neu">effort: trivial</span></div>
       </div>
     </article>
@@ -456,7 +457,7 @@
       <div class="id">S4<small>docs search</small></div>
       <div>
         <h3>Search docstrings and types on the docs site</h3>
-        <p>The doc-gen4 fork Tau Ceti already pins can put the docstring and the type string into the search index and match on them. This turns the one existing search surface from name-only into statement-text search.</p>
+        <p>The doc-gen4 fork Tau Ceti already pins can put the docstring and the type string into the search index and match on them. This turns the one existing search surface from name-only into statement-text search. Build it from the S1 manifest as a sharded static index, not by growing the client-side name index, which is already 11 MB per page load; see scaling below.</p>
         <div class="meta"><span class="pill teal">kim-em/doc-gen4</span><span class="pill neu">effort: medium</span></div>
       </div>
     </article>
@@ -484,6 +485,14 @@
         <div class="meta"><span class="pill teal">TauCeti AGENTS.md</span><span class="pill teal">TauCetiWorker prompts</span><span class="pill neu">effort: tiny</span></div>
       </div>
     </article>
+    <article class="rec">
+      <div class="id">S8<small>duplicates</small></div>
+      <div>
+        <h3>Near-duplicate check per new declaration, in CI</h3>
+        <p>Today duplicate detection is a reviewer grepping two source trees, and its precision falls as the library grows. A check that compares each new declaration's normalised type and its embedding against the S1 manifest, and posts the nearest existing declarations on the PR, scales as one query per declaration. Added after the growth measurements below; it belongs second, right after S1.</p>
+        <div class="meta"><span class="pill teal">TauCeti CI or TauCetiReview</span><span class="pill neu">effort: medium</span><span class="pill warn">workflow change, human-owned</span></div>
+      </div>
+    </article>
   </div>
 
   <h2 id="decisions">Decisions that need a human</h2>
@@ -495,6 +504,49 @@
       <li><strong>LeanExplore outreach (S6).</strong> Someone with standing in the project should ask. The S1 manifest gives them exactly the fields their pipeline extracts.</li>
       <li><strong>Where <code>tauceti-search</code> would live (S6).</strong> TauCetiWorker is kim-em's repo and already has a Python package structure; a separate small repo under TauCetiProject is the alternative.</li>
     </ul>
+  </div>
+
+  <h2 id="scale">How this scales</h2>
+  <div class="prose">
+    <p>The growth rate changes the priority order, so here are the measurements before the argument. Sizes are from the Tau Ceti and Mathlib checkouts at the same pin; merge counts are squash-merge commits on <code>main</code>.</p>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th></th><th>Tau Ceti, Sep 3</th><th>Mathlib, same pin</th></tr></thead>
+      <tbody>
+        <tr><td>Lean source</td><td>983k lines · 4,272 files · 46.8 MB</td><td>2.29M lines · 8,307 files · 109 MB</td></tr>
+        <tr><td>Age</td><td>three months (first commit June 2)</td><td>nine years</td></tr>
+        <tr><td>Source at month starts</td><td>2.7 MB (Jul) · 8.7 MB (Aug) · 45.7 MB (Sep)</td><td>a few percent per month</td></tr>
+        <tr><td>Merges per week, last month</td><td class="num">700 to 900</td><td class="num">300 to 400</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>At August's absolute rate Tau Ceti passes Mathlib by source size around November 2026; if the rate keeps compounding it is sooner. So a tool that is "fine at Mathlib scale" is fine for a few months, and anything already strained at Mathlib scale is a problem now.</p>
+
+    <h3>What breaks first</h3>
+    <p><strong>Grep, and it is the duplicate-detection mechanism for the whole review pipeline.</strong> Ripgrep over a gigabyte of source is still seconds, so it never fails mechanically. What fails is precision: hits per query grow with the library while an agent's context window stays fixed, so the share of relevant hits an author or reviewer actually reads falls every week. Duplication compounds, because each undetected duplicate is a second name for later searches to miss. The reuse rubric's "grep both trees" is the weakest link today and the S8 check is its scalable replacement.</p>
+    <p><strong>The docs site, in two places.</strong> The rebuild elaborates the entire library from cache every three hours, so build time is linear in size and will exceed the cadence within months; Mathlib's docs build is measured in hours. The fix is a persistent per-module doc cache across CI runs instead of the run-specific key used today, so a deploy rebuilds only changed modules. The second place is the client-side search index: 11 MB fetched on every search, with the fuzzy matcher running over every name in the browser. At five times the size it is unusable, and S4 as first written, which adds docstrings to that file, makes it worse. S4 should be built from the S1 manifest as a sharded static index or a small server, and the client index should stay name-only.</p>
+    <p><strong>The import-all aggregator degrades without breaking.</strong> Importing all of Mathlib already costs several gigabytes and tens of seconds per file; adding Tau Ceti doubles that soon and triples it later, and <code>exact?</code> builds its discrimination tree per file. Acceptable for one scratch file, unacceptable for a fleet of agents on one machine. The scalable form is per-area aggregators generated from the directory tree, which S3 now includes.</p>
+
+    <h3>What scales</h3>
+    <p><strong>Loogle.</strong> The index is built once per deploy in minutes, queries are close to constant time, and it is proven at Mathlib scale with headroom. Two or three Mathlibs is the same order of magnitude.</p>
+    <p><strong>Semantic search, best of all.</strong> Embedding fifty thousand rows takes minutes, a million takes an hour on a GPU, and approximate nearest-neighbour indexes go far beyond that. The risk is freshness, not size: at 800 merges a week, an index a day old misses roughly two percent of the library. The manifest needs a content hash per declaration so the embedder re-encodes only what changed on each deploy.</p>
+    <p><strong>Roadmap coverage scales with pull-request volume, not library size.</strong> TauCetiProgress attributes by blame per window, so its cost tracks merges per window. The fragile part is the GitHub API, which already times out on large PR queries. Coverage also becomes more valuable with size, because "search the area my roadmap touches" beats "search everything" once everything is bigger than Mathlib.</p>
+
+    <h3>Two structural points</h3>
+    <p><strong>The gap between models and the library is permanent and widening.</strong> Mathlib is in every model's training data and changes slowly; Tau Ceti adds tens of thousands of declarations a month and will never be in a training set by the time it is needed. Retrieval is not a stopgap until models catch up. It is the only route, and it deserves the same investment as CI.</p>
+    <p><strong>Structure is the search technology that scales without an index.</strong> Mathlib is navigable at two million lines because of directory conventions, naming conventions and module docstrings, all enforced by review. Tau Ceti's placement, naming and documentation rubrics are the same lever and should be tightened now: require a module docstring to name its main declarations, and generate per-directory index pages from the manifest. At ten times the current size, even Loogle results are legible only if names follow convention.</p>
+
+    <h3>Revised order</h3>
+    <ol>
+      <li><strong>S1</strong> manifest, with a per-declaration content hash so every downstream index can update incrementally.</li>
+      <li><strong>S8</strong> near-duplicate check in CI, because duplication compounds and grep is already failing at it.</li>
+      <li><strong>S6</strong> semantic search and <strong>S2</strong> Loogle, the two routes that stay fast past Mathlib scale.</li>
+      <li><strong>S7</strong> guidance and per-area aggregators from <strong>S3</strong>, both cheap.</li>
+      <li><strong>S5</strong> coverage, whose value rises with the number of roadmaps.</li>
+      <li><strong>S4</strong> docs search, rebuilt on the manifest rather than the client index, together with an incremental docs build.</li>
+    </ol>
   </div>
 
   <hr class="part-divider">
@@ -765,8 +817,35 @@ PR body what you searched for.</code></pre>
     </div>
   </article>
 
+  <article class="brief" id="s8">
+    <header><span class="id">S8</span><h3>Near-duplicate check per new declaration</h3><div class="meta"><span class="pill teal">TauCetiProject/TauCeti CI</span><span class="pill teal">or TauCetiReview reuse engine</span><span class="pill warn">workflow change, human-owned</span></div></header>
+    <div class="body">
+      <dl>
+        <dt>Goal</dt><dd>For every declaration a PR adds, the nearest existing declarations in Tau Ceti and Mathlib are posted on the PR before review, so the reuse rubric starts from candidates instead of from grep.</dd>
+        <dt>Depends on</dt><dd>S1 for Tau Ceti; a Mathlib manifest built the same way from the pinned Mathlib, cached per pin.</dd>
+        <dt>Reads</dt><dd><code>rubrics/reuse.md</code> for what counts as a duplicate (renaming, definitional unfolding, symmetry, duality, a bridging lemma); Loogle's type normalisation for the exact-restatement channel.</dd>
+      </dl>
+      <h4>Steps</h4>
+      <ol>
+        <li>Build a job that runs after the PR's <code>build</code> check, diffs the S1 manifest against <code>main</code>'s to get the added declarations, and for each one queries two channels: a normalised-type hash (constants and binder structure with bound names erased) for exact restatements, and an embedding nearest-neighbour search for near restatements.</li>
+        <li>Post one comment per PR, a table of new declaration, best candidate, channel, and score, and update it on each push. Never block on the score alone; the reviewer decides. Below a threshold post nothing.</li>
+        <li>Feed the same candidate list into the reuse rubric prompt in TauCetiReview, so the reviewer verifies candidates instead of searching.</li>
+        <li>Measure precision on the last hundred merged PRs whose reuse review found a duplicate; report recall against those findings in the PR body.</li>
+      </ol>
+      <h4>Acceptance</h4>
+      <ul class="accept">
+        <li>On a test PR that re-proves an existing Tau Ceti lemma under a new name, the comment names the original.</li>
+        <li>The job finishes in under two minutes for a 600-line PR and adds no new dependency to the main build.</li>
+      </ul>
+      <h4>Do not</h4>
+      <ul class="dont">
+        <li>Make the check a required status. False positives on a required check would train agents to rename around it.</li>
+      </ul>
+    </div>
+  </article>
+
   <footer>
-    Audit sources: the TauCeti, TauCetiProgress, TauCetiReview and TauCetiWorker repositories; the published docs index at <code>SOURCE_SHA</code> 8745177; the Loogle, lean-lsp-mcp and LeanExplore READMEs. Declaration and file counts are from the docs index and a checkout at e8af08d (2026-08-17) and will drift.
+    Growth figures: Tau Ceti source sizes from <code>git ls-tree</code> at each month start and the Sep 3 tip; Mathlib from the checkout at the same pin. Audit sources: the TauCeti, TauCetiProgress, TauCetiReview and TauCetiWorker repositories; the published docs index at <code>SOURCE_SHA</code> 8745177; the Loogle, lean-lsp-mcp and LeanExplore READMEs. Declaration and file counts are from the docs index and a checkout at e8af08d (2026-08-17) and will drift.
   </footer>
 </div>
 
