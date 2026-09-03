@@ -35,3 +35,7 @@ python3 build_board.py                      # writes index.html
 Then update `ROADMAP_HEAD`, `SNAPSHOT` and `TODAY` at the top of `build_board.py`, and add a
 line to `coverage.json` for any roadmap that gained a `STATUS.md` (one character per layer:
 `d`one, `p`artial, `u`ntouched, `?` unassessed, in README order).
+
+## Related
+
+- [Searching Tau Ceti](https://roed-math.github.io/tauceti-progress-board/searching-tau-ceti.html) — audit of search and discovery tooling for the library versus Mathlib, with recommendations for humans and implementation briefs for agents.
