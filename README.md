@@ -1,41 +1,16 @@
-# Tau Ceti progress board (prototype)
+# Tau Ceti progress board (demo)
 
-A one-page overview of where every [Tau Ceti](https://github.com/TauCetiProject/TauCeti)
-roadmap stands: one row per roadmap, one segment per layer, coloured by how much of that
-layer the library has, beside the pull requests merged under the roadmap's label each week.
+**Live page:** https://roed-math.github.io/tauceti-progress-board/progress/
 
-**Live page:** https://roed-math.github.io/tauceti-progress-board/
+This is the Tau Ceti website's new **Progress** page exactly as the site would render it after
+merging the `progress-page` branch
+([compare](https://github.com/TauCetiProject/TauCeti/compare/main...roed-math:TauCeti-w2-fresh:progress-page)):
+the HTML here was produced by the site's own Verso build from that branch, with the same
+`static/style.css`, `static/progress.js` and generated `static/progress.json`. The Statistics page
+is included too, since the branch adds a cross-link from it; Home and About link to the live site,
+because those pages need the full library to build.
 
-This is a demonstration for gathering feedback, not the real thing. The page itself explains
-the design and what it would take to build it properly. The short version:
+The generator, its tests, the topic map and the hand-read coverage file all live on the branch
+(`scripts/roadmap_progress.py` and friends). Nothing here is maintained by hand any more.
 
-- The layer strips are read **by hand** from each roadmap's generated `STATUS.md` prose
-  (`coverage.json`). The real build needs TauCetiProgress to emit a machine-readable per-layer
-  verdict beside the prose (a `tauceti-coverage:v1` marker); that is the one upstream change the
-  design asks for.
-- Activity comes from the `roadmap/<Area>` labels on merged TauCeti pull requests, exactly as
-  the site's Statistics page already uses them.
-- Topics are a hand assignment (`topics.json`).
-- The page belongs on the TauCeti site, regenerated every three hours by the Pages workflow
-  that already clones TauCetiRoadmap and reads labels.
-
-Deep links for demos: `?sort=topic`, `?sort=coverage`, `?sort=snapshot` (update due),
-`?show=assessed`, `?show=completed`.
-
-## Regenerating
-
-```sh
-python3 fetch_prs.py merged.json            # merged TauCeti PRs with labels, via gh (GraphQL)
-gh pr list --repo TauCetiProject/TauCeti --state open --limit 1000 \
-  --json number,title,labels,createdAt > open.json
-(cd /path/to/TauCetiRoadmap && python3 /path/to/local_data.py /path/to/local.json)
-python3 build_board.py                      # writes index.html
-```
-
-Then update `ROADMAP_HEAD`, `SNAPSHOT` and `TODAY` at the top of `build_board.py`, and add a
-line to `coverage.json` for any roadmap that gained a `STATUS.md` (one character per layer:
-`d`one, `p`artial, `u`ntouched, `?` unassessed, in README order).
-
-## Related
-
-- [Searching Tau Ceti](https://roed-math.github.io/tauceti-progress-board/searching-tau-ceti.html) — audit of search and discovery tooling for the library versus Mathlib, with recommendations for humans and implementation briefs for agents.
+`prototype.html` is the earlier standalone prototype this grew out of, kept for reference.
