@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="static/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;display=swap">
+    <title>Statistics — Tau Ceti</title><base href=".././"><style>:root {
+    /** Typography **/
+    /* The font family used for headers, ToC entries, etc */
+    --verso-structure-font-family: "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
+    /* The font family used for body text */
+    --verso-text-font-family: "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
+    /* The font family used for code */
+    --verso-code-font-family: monospace;
+
+    /** Text colors **/
+    --verso-text-color: black;
+    --verso-code-color: black;
+    --verso-structure-color: black;
+
+    /** Selected items (e.g. search results) */
+    --verso-selected-color: #def;
+
+    /** Message colors **/
+    /*
+    These colors are used to render Lean's feedback. They come in three severities and two
+    variants. The raw color itself is used for the text of a message of the indicated severity,
+    while the presence of such a message is indicated using the indicator color (e.g. via a
+    wavy underline or a bar in the margin).
+    */
+    --verso-info-color: black;
+    --verso-info-indicator-color: #4777ff;
+    --verso-warning-color: black;
+    --verso-warning-indicator-color: #e7a71d; /* 2.11 contrast ratio for white, 9.94 for black */
+    --verso-error-color: #cc0000;
+    --verso-error-indicator-color: #ff0000;
+
+    /** Code Highlighting **/
+    /*
+    These variables control the rendering of Lean code emitted by Verso. Each category that can be
+    highlighted supports the customization of color, weight, style, and family.
+    */
+    /* Constants (e.g. `List` or `id` or `none`) */
+    --verso-code-const-color: var(--verso-code-color);
+    --verso-code-const-weight: normal;
+    --verso-code-const-style: normal;
+    --verso-code-const-font-family: var(--verso-code-font-family);
+
+    /* Keywords/atoms (e.g. `for` or `def` or `induction`) */
+    --verso-code-keyword-color: var(--verso-code-color);
+    --verso-code-keyword-weight: bold;
+    --verso-code-keyword-style: normal;
+    --verso-code-keyword-font-family: var(--verso-code-font-family);
+
+    /* Local bindings (e.g. `x` in `let x := 5`) */
+    --verso-code-var-color: var(--verso-code-color);
+    --verso-code-var-weight: normal;
+    --verso-code-var-style: italic;
+    --verso-code-kw-font-family: var(--verso-code-font-family);
+}
+</style><script>
+      
+document.addEventListener("DOMContentLoaded", () => {
+    for (const m of document.querySelectorAll(".math.inline")) {
+        katex.render(m.textContent, m, {throwOnError: false, displayMode: false});
+    }
+    for (const m of document.querySelectorAll(".math.display")) {
+        katex.render(m.textContent, m, {throwOnError: false, displayMode: true});
+    }
+});
+</script>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/site.js" defer="defer"></script>
+    </head>
+  <body>
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="brand" href="https://taucetiproject.github.io/TauCeti/"><img src="static/header.png" alt="Tau Ceti"></a><nav class="nav-links">
+          <a href="https://taucetiproject.github.io/TauCeti/">Home</a><a href="statistics">Statistics</a><a href="progress">Progress</a><a href="https://taucetiproject.github.io/TauCeti/about">About</a><a href="https://github.com/TauCetiProject/TauCeti">GitHub</a></nav>
+        </div>
+      </header>
+    <main><article><h1>
+          Statistics</h1>
+        <p>
+          How much mathematics has Tau Ceti formalized, and how fast is the roadmap that
+directs it growing? Each chart plots the total number of lines present at every
+commit, counted straight from the git history and rebuilt from scratch at each
+deploy, so the figures cannot drift.</p>
+        <div class="loc-graphs">
+          <figure class="loc-figure"><img class="loc-graph" src="static/loc-tauceti.svg" alt="Tau Ceti: lines of Lean by date"><figcaption>The Lean library under <code>TauCeti/</code>, total lines by date.</figcaption></figure><figure class="loc-figure"><img class="loc-graph" src="static/loc-roadmap.svg" alt="Tau Ceti Roadmap: lines written by date"><figcaption>The human-owned roadmap repository, total lines by date.</figcaption></figure></div>
+        <p>
+          The vertical scales differ by an order of magnitude and on purpose: the library is
+measured in tens of thousands of lines of Lean, the roadmap in thousands of lines of
+prose and target statements. The library figure counts only the mathematics — the
+files under <code>TauCeti/</code> — not the website or tooling.</p>
+        <p>
+          Which roadmap is all that Lean serving? Every pull request is labelled with the
+roadmap it advances, so we can split the library by roadmap. The chart below stacks
+the net lines each roadmap has accrued — every merged PR's additions minus its
+deletions, attributed to its roadmap — by the day the PR merged. Because it sums
+diffs rather than counting the lines in the tree, a line later rewritten counts under
+both PRs, so this measures work landed per roadmap, not a snapshot line count.
+Infrastructure and refactor PRs, which advance no roadmap, are left out. How far each roadmap
+has got against its own specification is a different question, answered on the
+<a href="progress">Progress</a> page.</p>
+        <figure class="loc-figure loc-figure-wide"><img class="loc-graph" src="static/loc-per-roadmap.svg" alt="Tau Ceti: cumulative net lines of Lean per roadmap, over time"><figcaption>Net lines added or refactored per roadmap, stacked, by the date each PR merged.</figcaption></figure><p>
+          How is the contribution and review pipeline behaving? The first chart separates a
+PR's total age from the clock on its current state. The author-action clock covers both
+states that wait on a human, a failed build and a review that requested changes. PRs
+outside the author-action and review states appear in total time open but not in the two
+current-state panels.
+The rolling history uses complete UTC days. The review-cycle chart counts durable label
+transitions rather than scoreboard comments, because a scoreboard
+may be edited in place as later rounds complete. A cycle is one entry into review from
+an author or CI state, so the pipeline swapping <code>awaiting-review</code> for
+<code>review-in-progress</code> and back within a single round stays one cycle. Its subtitle states
+when those review-state transitions first appear in project history.</p>
+        <div class="loc-graphs">
+          <figure class="loc-figure"><img class="loc-graph" src="static/pr-queue-age.svg" alt="Open pull request age, followed by time awaiting author and time in review" loading="lazy"><figcaption>Age of every open PR, then elapsed time in its current author-action or review cycle.</figcaption></figure><figure class="loc-figure"><img class="loc-graph" src="static/rolling-seven-day-history.svg" alt="Trailing-seven-day pull request throughput, participation, and merge latency" loading="lazy"><figcaption>Merges, active PR authors, and creation-to-merge latency in trailing seven-day UTC windows.</figcaption></figure><figure class="loc-figure"><img class="loc-graph" src="static/review-cycles-reached.svg" alt="Pull requests reaching each successive review cycle" loading="lazy"><figcaption>PRs reaching each review cycle; a cycle begins whenever a PR returns to <code>awaiting-review</code> after its author's turn.</figcaption></figure></div>
+        <p>
+          Who has taken part? The snapshot below counts GitHub accounts that have
+opened a pull request or issue, participated in those conversations (including
+reviews), or authored a commit on the default branch of TauCeti, TauCetiRoadmap,
+TauCetiWorker, or TauCetiReview. Accounts recognised as automation are dropped:
+logins carrying GitHub's <code>[bot]</code> suffix, together with the project's own automation
+aliases. Nothing verifies that the accounts left over belong to people, so any
+automation the filter does not recognise is still counted. The headline
+deduplicates accounts across all four repositories; the repository bars
+deliberately overlap.</p>
+        <figure class="loc-figure loc-figure-wide"><img class="loc-graph" src="static/participation.svg" alt="Participation across the four Tau Ceti repositories, by repository"><figcaption>Participating accounts by repository, once recognised automation is excluded; an account active in several repositories appears in several bars.</figcaption></figure><p>
+          How have merged contributions and reviews accumulated? Unlike the rolling charts above,
+these histories include the current partial UTC day through the snapshot time. They show
+every contributor while that remains legible, then cap themselves at 24 named lines and
+combine the remaining long tail. Exact totals for every login remain available in the generated
+<a href="static/pr-stats.json"><code>pr-stats.json</code></a>. A review is one canonical v1 scoreboard whose
+posting login also authors a merged PR in the fetched snapshot.</p>
+        <div class="loc-graphs">
+          <figure class="loc-figure"><img class="loc-graph" src="static/cumulative-merges-by-contributor.svg" alt="Cumulative merged pull requests by contributor" loading="lazy"><figcaption>Cumulative merged PRs by author since project inception.</figcaption></figure><figure class="loc-figure"><img class="loc-graph" src="static/cumulative-reviews-by-contributor.svg" alt="Cumulative reviews by contributor" loading="lazy"><figcaption>Cumulative reviews by contributor since project inception. Each review is one canonical v1 scoreboard; edits to an existing scoreboard do not add counts.</figcaption></figure></div>
+        </article></main><footer class="site-footer"><div class="foot-inner">
+        <p class="foot-tag">
+          Let’s do lots of maths.</p>
+        <ul class="foot-links">
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCeti">TauCeti</a></li>
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCetiRoadmap">TauCetiRoadmap</a></li>
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCetiReview">TauCetiReview</a></li>
+          </ul>
+        <p class="foot-legal">
+          AI-authored Lean mathematics · Apache-2.0</p>
+        </div>
+      </footer></body>
+  </html>
+

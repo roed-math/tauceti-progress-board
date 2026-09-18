@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="static/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;display=swap">
+    <title>Progress — Tau Ceti</title><base href=".././"><style>:root {
+    /** Typography **/
+    /* The font family used for headers, ToC entries, etc */
+    --verso-structure-font-family: "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
+    /* The font family used for body text */
+    --verso-text-font-family: "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
+    /* The font family used for code */
+    --verso-code-font-family: monospace;
+
+    /** Text colors **/
+    --verso-text-color: black;
+    --verso-code-color: black;
+    --verso-structure-color: black;
+
+    /** Selected items (e.g. search results) */
+    --verso-selected-color: #def;
+
+    /** Message colors **/
+    /*
+    These colors are used to render Lean's feedback. They come in three severities and two
+    variants. The raw color itself is used for the text of a message of the indicated severity,
+    while the presence of such a message is indicated using the indicator color (e.g. via a
+    wavy underline or a bar in the margin).
+    */
+    --verso-info-color: black;
+    --verso-info-indicator-color: #4777ff;
+    --verso-warning-color: black;
+    --verso-warning-indicator-color: #e7a71d; /* 2.11 contrast ratio for white, 9.94 for black */
+    --verso-error-color: #cc0000;
+    --verso-error-indicator-color: #ff0000;
+
+    /** Code Highlighting **/
+    /*
+    These variables control the rendering of Lean code emitted by Verso. Each category that can be
+    highlighted supports the customization of color, weight, style, and family.
+    */
+    /* Constants (e.g. `List` or `id` or `none`) */
+    --verso-code-const-color: var(--verso-code-color);
+    --verso-code-const-weight: normal;
+    --verso-code-const-style: normal;
+    --verso-code-const-font-family: var(--verso-code-font-family);
+
+    /* Keywords/atoms (e.g. `for` or `def` or `induction`) */
+    --verso-code-keyword-color: var(--verso-code-color);
+    --verso-code-keyword-weight: bold;
+    --verso-code-keyword-style: normal;
+    --verso-code-keyword-font-family: var(--verso-code-font-family);
+
+    /* Local bindings (e.g. `x` in `let x := 5`) */
+    --verso-code-var-color: var(--verso-code-color);
+    --verso-code-var-weight: normal;
+    --verso-code-var-style: italic;
+    --verso-code-kw-font-family: var(--verso-code-font-family);
+}
+</style><script>
+      
+document.addEventListener("DOMContentLoaded", () => {
+    for (const m of document.querySelectorAll(".math.inline")) {
+        katex.render(m.textContent, m, {throwOnError: false, displayMode: false});
+    }
+    for (const m of document.querySelectorAll(".math.display")) {
+        katex.render(m.textContent, m, {throwOnError: false, displayMode: true});
+    }
+});
+</script>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js" integrity="sha384-zbcZAIxlvJtNE3Dp5nxLXdXtXyxwOdnILY1TDPVmKFhl4r4nSUG1r8bcFXGVa4Te" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/site.js" defer="defer"></script>
+    </head>
+  <body>
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="brand" href="https://taucetiproject.github.io/TauCeti/"><img src="static/header.png" alt="Tau Ceti"></a><nav class="nav-links">
+          <a href="https://taucetiproject.github.io/TauCeti/">Home</a><a href="statistics">Statistics</a><a href="progress">Progress</a><a href="https://taucetiproject.github.io/TauCeti/about">About</a><a href="https://github.com/TauCetiProject/TauCeti">GitHub</a></nav>
+        </div>
+      </header>
+    <main><article><h1>
+          Progress</h1>
+        <p>
+          How far along is each roadmap? The <a href="statistics">Statistics</a> page measures volume: lines of
+Lean per roadmap, pull requests merged, reviews written. This page measures distance to the
+specification instead. Each roadmap's own <code>README.md</code> names the layers (or lanes, parts,
+stages) it asks for, and each segment of a strip below is one of those layers, filled by how
+much of it Tau Ceti now has: solid when the layer's milestones are proved, faint when some
+are, outlined when nothing has landed, hatched when nobody has assessed it. Beside the strip
+are the pull requests merged under that roadmap's label, week by week.</p>
+        <div class="progress-page">
+          <div id="progress-board">
+            <p class="pb-lede">
+              Loading the roadmap board…</p>
+            </div>
+          <script src="static/progress.js" defer="defer"></script>
+          </div>
+        <p>
+          Three kinds of evidence go into the board, and the columns say which is which. The layers
+themselves come from the human-written roadmaps and do not move when code lands. The state
+of each layer is a judgment about the library, read from the roadmap's generated <code>STATUS.md</code>
+snapshot, which <a href="https://github.com/TauCetiProject/TauCetiProgress">TauCetiProgress</a> writes
+after each window of merged pull requests; those snapshots are a model's account of the work,
+not security-validated and not checked by Lean, and the board carries exactly the same
+verdicts the prose does. The pull-request counts are mechanical, from the same
+<code>roadmap/&lt;Area&gt;</code> labels the per-roadmap chart on the Statistics page uses. The one state that
+is checked by Lean is "completed": a roadmap the maintainers have archived under
+<code>Completed/</code>, whose target signatures are discharged in place by the library's own
+declarations.</p>
+        <p>
+          A snapshot is always somewhat behind the library, because it describes the last published
+documentation build rather than the tip, so its age alone is not a signal. The board marks a
+roadmap as due an update once ten or more pull requests have merged since its snapshot, the
+same threshold TauCetiProgress itself uses to open a new reporting window. Roadmaps with no
+snapshot yet show their layers hatched; the umbrella roadmap for representation theory is
+reported as one unit, so its sub-roadmaps share its snapshot and its label.</p>
+        <p>
+          The topic grouping is a hand assignment kept beside the generator, and so are, for now, the
+per-layer states: TauCetiProgress does not yet write them in a machine-readable form, so the
+generator reads a companion file of states transcribed from each snapshot's prose, keyed to
+the exact commit that snapshot describes. A newer snapshot retires the transcription and the
+layers go back to hatched until it is read again. The intended replacement is a
+<code>tauceti-coverage:v1</code> marker beside the status header, one line per layer, validated by the
+same script that validates the rest of a generated report; the generator already prefers it
+whenever one is present.
+</p>
+        </article></main><footer class="site-footer"><div class="foot-inner">
+        <p class="foot-tag">
+          Let’s do lots of maths.</p>
+        <ul class="foot-links">
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCeti">TauCeti</a></li>
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCetiRoadmap">TauCetiRoadmap</a></li>
+          <li>
+            <a href="https://github.com/TauCetiProject/TauCetiReview">TauCetiReview</a></li>
+          </ul>
+        <p class="foot-legal">
+          AI-authored Lean mathematics · Apache-2.0</p>
+        </div>
+      </footer></body>
+  </html>
+
